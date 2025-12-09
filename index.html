@@ -292,7 +292,7 @@
             font-weight: bold;
         }
 
-        /* --- MODAL POPUP --- */
+        /* --- ARTIST MODAL POPUP --- */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -320,14 +320,13 @@
             to { transform: scale(1); opacity: 1; }
         }
         
-        /* Modal Image */
         .modal-img-container {
             width: 100%;
             height: 180px;
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 15px;
-            display: none; /* Hidden by default if no image */
+            display: none;
         }
         .modal-img {
             width: 100%;
@@ -380,16 +379,76 @@
             padding: 5px;
         }
 
+        /* --- PROMO OVERLAY STYLES --- */
+        .promo-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000; /* Higher than everything else */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+        .promo-box {
+            width: 85%;
+            max-width: 400px;
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .promo-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            display: block;
+        }
+        .btn-promo-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 24px;
+            line-height: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            padding-bottom: 3px; /* visual center adjustment */
+        }
+        .btn-promo-close:active {
+            background: rgba(255,255,255,0.4);
+        }
+
     </style>
 </head>
 <body>
 
+    <div class="promo-overlay" id="promo-overlay">
+        <div class="promo-box">
+            <button class="btn-promo-close" onclick="closePromo()">×</button>
+            <a href="https://www.ticketflap.com/clockenflap2026" target="_blank">
+                <img src="https://totalticketing-ets-ttlcom-prod-singapore-web-files.s3.amazonaws.com/media/uploads/images/056a1c096df6d1bd.jpeg" alt="Clockenflap Promo" class="promo-img">
+            </a>
+        </div>
+    </div>
     <div class="brand-header">
         <img src="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg" alt="Clockenflap" class="brand-logo">
     </div>
 
     <div class="tabs">
-        <div class="tab active" onclick="switchDay('Fri')">DEC 5 (FRI)</div>
+        <div class="tab" onclick="switchDay('Fri')">DEC 5 (FRI)</div>
         <div class="tab" onclick="switchDay('Sat')">DEC 6 (SAT)</div>
         <div class="tab" onclick="switchDay('Sun')">DEC 7 (SUN)</div>
     </div>
@@ -536,11 +595,6 @@
         {d: "Sun", s: "Minimax", a: "ACT 3", t: "19:15-19:55"},
     ];
 
-    // --- STATE ---
-    let currentDay = "Fri";
-    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist')) || []);
-    let selectedArtistId = null;
-
     // --- UTILS ---
     function getGridStartHour(day) {
         return day === 'Fri' ? 17 : 13;
@@ -572,6 +626,33 @@
     function createId(item) {
         return `${item.d}-${item.a}`;
     }
+
+    // --- PROMO FUNCTION ---
+    function closePromo() {
+        document.getElementById('promo-overlay').style.display = 'none';
+    }
+
+    // --- DATE LOGIC ---
+    function determineInitialDay() {
+        const now = new Date();
+        // Format as YYYY-MM-DD for easy string comparison based on local browser time
+        const todayStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+
+        // Festival Dates: 2025-12-05 to 2025-12-07
+        if (todayStr < '2025-12-05') return 'Fri'; // Before event
+        if (todayStr === '2025-12-05') return 'Fri';
+        if (todayStr === '2025-12-06') return 'Sat';
+        if (todayStr === '2025-12-07') return 'Sun';
+        if (todayStr > '2025-12-07') return 'Sun'; // After event
+
+        return 'Fri'; // Fallback
+    }
+
+    // --- STATE ---
+    let currentDay = determineInitialDay(); // Automatically determine day on load
+    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist')) || []);
+    let selectedArtistId = null;
+
 
     // --- CORE RENDER ---
     function renderSchedule(day) {
@@ -753,7 +834,18 @@
     }
 
     // --- INIT ---
-    renderSchedule('Fri');
+    // Render based on determined current day
+    renderSchedule(currentDay);
+    
+    // Update UI Tabs to reflect the auto-selected day
+    document.querySelectorAll('.tab').forEach(t => {
+        t.classList.remove('active');
+        // Check if the tab text contains the currentDay string (e.g., "FRI")
+        if(t.textContent.includes(currentDay.toUpperCase())) {
+            t.classList.add('active');
+        }
+    });
+
     setInterval(updateTimeLine, 60000); 
     updateTimeLine(); 
 
