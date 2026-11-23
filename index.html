@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -273,6 +273,11 @@
         }
         .artist-block:active {
             transform: scale(0.98);
+        }
+        .artist-block:focus-visible {
+            outline: 3px solid var(--card-ink);
+            outline-offset: 2px;
+            z-index: 6;
         }
 
         /* WISHLIST STYLES */
@@ -730,6 +735,7 @@
         wishlist = new Set();
     }
     let selectedArtistId = null;
+    let lastFocusedElement = null;
     let currentArtistQuery = "";
     let fallbackTimer = null;
     let resetConfirmPending = false;
@@ -803,8 +809,9 @@
             if (colIndex > 1) {
                 const div = document.createElement('div');
                 div.className = `artist-block ${getStageClass(item.s)}`;
-                
-                if (wishlist.has(artistId)) {
+                const isWishlisted = wishlist.has(artistId);
+
+                if (isWishlisted) {
                     div.classList.add('wishlisted');
                     promoted = true;
                 }
@@ -812,9 +819,18 @@
                 div.style.gridColumn = colIndex;
                 div.style.gridRow = `${rowStart} / span ${span}`;
                 div.innerHTML = `<div class="artist-time">${item.t}</div>${item.a}`;
-                
+                div.setAttribute('role', 'button');
+                div.tabIndex = 0;
+                div.setAttribute('aria-label', `${item.a}, ${item.s}, ${item.t}${isWishlisted ? ', wishlisted' : ''}`);
+
                 div.onclick = () => openModal(item, artistId);
-                
+                div.onkeydown = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openModal(item, artistId);
+                    }
+                };
+
                 container.appendChild(div);
             }
         });
@@ -832,6 +848,7 @@
 
     function openModal(item, id) {
         selectedArtistId = id;
+        lastFocusedElement = document.activeElement;
         
         document.getElementById('m-artist').textContent = item.a;
         document.getElementById('m-info').textContent = `${item.d.toUpperCase()} • ${item.s} • ${item.t}`;
@@ -854,6 +871,7 @@
         }
 
         document.getElementById('modal').style.display = 'flex';
+        document.querySelector('#modal .btn-close').focus();
     }
 
     function launchSchemeWithFallback(schemeUrl, webFallbackUrl) {
@@ -935,6 +953,10 @@
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
         selectedArtistId = null;
+        if (lastFocusedElement && lastFocusedElement.isConnected) {
+            lastFocusedElement.focus();
+        }
+        lastFocusedElement = null;
     }
 
     function toggleCurrentWishlist() {
@@ -978,6 +1000,10 @@
     document.getElementById('modal').onclick = function(e) {
         if (e.target === this) closeModal();
     };
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
 
     // --- TIME LINE & CONTROLS ---
     function updateTimeLine() {

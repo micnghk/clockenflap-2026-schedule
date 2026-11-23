@@ -327,17 +327,18 @@ no compositing, so the focus state paints less than the current focus state does
 
 Card text measures 5.70–5.73:1 muted and 8.36–15.93:1 wishlisted, in both modes.
 
-Three gaps remain, stated rather than implied fixed:
+One gap remains, stated rather than implied fixed:
 
 *   **Card boundary vs page**: muted fills measure 2.89–2.91:1 against the light
     page, 0.1 below the 3:1 non-text threshold. `L* 56` clears it at 3.30:1 and is
     Alternative C. Wishlisted fills are 1.04–1.98:1 against the page — unchanged
     from the shipped design, which already failed this.
-*   **Viewport zoom**: `<meta name="viewport" ... maximum-scale=1.0,
-    user-scalable=no>` blocks zoom on 8.5px text. Removing it is a larger
-    legibility win than any colour change here, and it is out of scope only
-    because it changes the whole page's gesture behaviour.
-*   **Keyboard**: the blocks are `div`s with `onclick`, no role and no tabindex.
+
+Two gaps recorded here are now closed in `index.html`: the viewport no longer
+sets `user-scalable=no`, so pinch zoom works on the 8.5px text; and each card
+carries `role="button"`, `tabindex="0"` and an `aria-label` of artist, stage and
+time, opens on Enter or Space, moves focus into the modal on open, restores it on
+close, and closes on Escape.
 
 ### Rollout
 
@@ -380,7 +381,6 @@ HTML. The only stored value is a list of artist IDs under
 *   **Full palette migration**: adopting the site surface `#B3FFEA` and coral
     `#FF6571` would raise text-on-fill contrast and lower the card-to-page
     boundary margin, which is already the weakest number here.
-*   **Remove `user-scalable=no`**: the largest single legibility win available.
 *   **Responsive grid geometry**: landed separately in `12151bf`
     (`repeat(6, minmax(var(--col-width), 1fr))`), so the "no grid geometry
     change" non-goal above still reads true of this design — it did not include
