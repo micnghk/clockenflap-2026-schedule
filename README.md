@@ -1,2 +1,2 @@
-# clockenflap-2025-schedule
-Clockenflap 2025 Schedule
+# clockenflap-2026-schedule
+Clockenflap 2026 Schedule
