@@ -30,7 +30,7 @@ possible: at the shipped ink `#164234`, a 4.5:1 text floor caps the muted fill a
 The focus state destroys the timetable it is meant to help you read.
 
 1.  **Text contrast collapses.** Non-wishlisted name text measures 1.42–1.71:1 in
-    light mode and 1.65–2.27:1 in dark; the 8.5px time label carries its own
+    light mode and 1.65–2.27:1 in dark; the time label carries its own
     `opacity: 0.88` (`index.html:279-282`) and falls to 1.36–1.59 and 1.56–2.08.
     Both are far below 4.5:1.
 2.  **Stage identity erodes.** `grayscale(65%)` removes the hue that separates the
@@ -235,8 +235,8 @@ against the shipped fills.
 
 `.artist-time` loses `opacity: 0.88` and uses `--card-ink`. With the alpha in
 place the label measures 4.32:1 on Orbit and 4.47:1 on Poly*Technic; without it
-it carries the same contrast as the name. Hierarchy comes from size (8.5px vs
-10px) and weight (600 vs 800).
+it carries the same contrast as the name. Hierarchy comes from size (9px vs
+11px) and weight (600 vs 800).
 
 ### Mode invariance
 
@@ -335,7 +335,7 @@ One gap remains, stated rather than implied fixed:
     from the shipped design, which already failed this.
 
 Two gaps recorded here are now closed in `index.html`: the viewport no longer
-sets `user-scalable=no`, so pinch zoom works on the 8.5px text; and each card
+sets `user-scalable=no`, so pinch zoom works on the small card text; and each card
 carries `role="button"`, `tabindex="0"` and an `aria-label` of artist, stage and
 time, opens on Enter or Space, moves focus into the modal on open, restores it on
 close, and closes on Escape.
@@ -381,6 +381,11 @@ HTML. The only stored value is a list of artist IDs under
 *   **Full palette migration**: adopting the site surface `#B3FFEA` and coral
     `#FF6571` would raise text-on-fill contrast and lower the card-to-page
     boundary margin, which is already the weakest number here.
+*   **Larger card type**: the artist name went 10px → 11px and the time label
+    8.5px → 9px. Measured at 390px across 83 cards: the tightest card fills 71%
+    of its inner height, nothing overflows, and the longest name still wraps to
+    four lines. 12px/10px also fits (77%), but a card below about 70px — a
+    20-minute set — would clip at that size.
 *   **Responsive grid geometry**: landed separately in `12151bf`
     (`repeat(6, minmax(var(--col-width), 1fr))`), so the "no grid geometry
     change" non-goal above still reads true of this design — it did not include
