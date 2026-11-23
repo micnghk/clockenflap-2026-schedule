@@ -179,6 +179,41 @@
             background: var(--bg-color);
             overscroll-behavior: none;
             -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity;
+        }
+
+        .schedule-shell {
+            position: relative;
+            flex: 1;
+            display: flex;
+            min-height: 0;
+        }
+
+        /* Right-edge cue: iOS shows no scrollbar until you swipe, so without
+           this there is nothing to say three stages sit off-screen. */
+        .scroll-hint {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            background: linear-gradient(to right, transparent, var(--card-bg) 88%);
+            color: var(--text-main);
+            font-size: 20px;
+            font-weight: 700;
+            z-index: 25;
+        }
+        .scroll-hint::after {
+            content: "\203A";
+        }
+        .scroll-hint.visible {
+            opacity: 0.85;
         }
 
         .schedule-grid {
@@ -196,6 +231,7 @@
             position: sticky;
             top: 0;
             height: var(--header-height);
+            scroll-snap-align: start;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -566,9 +602,12 @@
         <button type="button" class="tab" aria-pressed="false" onclick="switchDay('Sun', this)">DEC 6 (SUN)</button>
     </div>
 
-    <div class="schedule-viewport" id="viewport">
-        <div class="schedule-grid" id="schedule-container"></div>
-        <div id="current-time-line"></div>
+    <div class="schedule-shell">
+        <div class="schedule-viewport" id="viewport">
+            <div class="schedule-grid" id="schedule-container"></div>
+            <div id="current-time-line"></div>
+        </div>
+        <div class="scroll-hint" id="scroll-hint" aria-hidden="true"></div>
     </div>
 
     <div class="controls">
@@ -863,6 +902,15 @@
         });
 
         container.classList.toggle('has-wishlist', promoted);
+        updateScrollHint();
+    }
+
+    function updateScrollHint() {
+        const vp = document.getElementById('viewport');
+        const hint = document.getElementById('scroll-hint');
+        if (!vp || !hint) return;
+        const remaining = vp.scrollWidth - vp.clientWidth - vp.scrollLeft;
+        hint.classList.toggle('visible', remaining > 8);
     }
 
     // --- MODAL LOGIC ---
@@ -1114,11 +1162,15 @@
     renderSchedule(currentDay);
 
     document.querySelectorAll('.tab').forEach(t => {
-        t.classList.remove('active');
-        if (t.textContent.includes(currentDay.toUpperCase())) {
-            t.classList.add('active');
-        }
+        const isCurrent = t.textContent.includes(currentDay.toUpperCase());
+        t.classList.toggle('active', isCurrent);
+        t.setAttribute('aria-pressed', String(isCurrent));
     });
+
+    const scheduleViewport = document.getElementById('viewport');
+    scheduleViewport.addEventListener('scroll', updateScrollHint, { passive: true });
+    window.addEventListener('resize', updateScrollHint);
+    updateScrollHint();
 
     setInterval(updateTimeLine, 60000); 
     updateTimeLine(); 
