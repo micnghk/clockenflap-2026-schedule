@@ -3132,6 +3132,849 @@
           "fontWeight": "normal"
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "bL5P8",
+      "x": 1820,
+      "y": 80,
+      "name": "Board AFTER — cross-day (Sat)",
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "AuOtK",
+          "name": "Board title",
+          "fill": "#001A14",
+          "content": "AFTER — cross-day (Sat)",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "rA4QA",
+          "name": "Screen",
+          "clip": true,
+          "width": 390,
+          "height": 526,
+          "fill": "#FAF3F3",
+          "stroke": "#E8BFC2",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XiN88",
+              "name": "Brand bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "#E8757C",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qR737",
+                  "name": "Wordmark",
+                  "fill": "#FFFFFF",
+                  "content": "Clockenflap",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hox8E",
+              "name": "Day tabs",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#103227",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uBvmn",
+                  "name": "Tab DEC 4 (FRI)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "adpEi",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 4 (FRI)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZLXlI",
+                  "name": "Tab DEC 5 (SAT)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#F6F08A",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Eb2eF",
+                      "name": "Tab label",
+                      "fill": "#164234",
+                      "content": "DEC 5 (SAT)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "voLWW",
+                  "name": "Tab DEC 6 (SUN)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "COyhP",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 6 (SUN)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dNJsz",
+              "name": "Stage header",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "#164234",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nE1QZ",
+                  "name": "Corner",
+                  "width": 52,
+                  "height": 42,
+                  "fill": "#164234"
+                },
+                {
+                  "type": "frame",
+                  "id": "DfQ8b",
+                  "name": "Stage HARBOURFLAP",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Intff",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "HARBOURFLAP",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SKnlr",
+                  "name": "Stage ORBIT",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dAlL4",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "ORBIT",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dQltG",
+                  "name": "Stage PARK",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DFz72",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "PARK",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NcmxF",
+              "name": "Grid",
+              "width": 390,
+              "height": 380,
+              "fill": "#FAF3F3",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "M5f9CL",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Time column",
+                  "fill": "#164234",
+                  "width": 52,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "cnQ6Y",
+                  "x": 52,
+                  "y": 0,
+                  "name": "Grid line 17:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "re31K",
+                  "x": 4,
+                  "y": 2,
+                  "name": "Time 17:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "S8KqO",
+                  "x": 52,
+                  "y": 46.5,
+                  "name": "Grid line 17:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Vrq5P",
+                  "x": 4,
+                  "y": 39.5,
+                  "name": "Time 17:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "azd0g",
+                  "x": 52,
+                  "y": 93,
+                  "name": "Grid line 18:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "RKezV",
+                  "x": 4,
+                  "y": 86,
+                  "name": "Time 18:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "AhD39",
+                  "x": 52,
+                  "y": 139.5,
+                  "name": "Grid line 18:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Dak8z",
+                  "x": 4,
+                  "y": 132.5,
+                  "name": "Time 18:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "AEICY",
+                  "x": 52,
+                  "y": 186,
+                  "name": "Grid line 19:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "jZi2b",
+                  "x": 4,
+                  "y": 179,
+                  "name": "Time 19:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "G6zFxc",
+                  "x": 52,
+                  "y": 232.5,
+                  "name": "Grid line 19:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "j6OYh",
+                  "x": 4,
+                  "y": 225.5,
+                  "name": "Time 19:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "hdso4",
+                  "x": 52,
+                  "y": 279,
+                  "name": "Grid line 20:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "l789Z4",
+                  "x": 4,
+                  "y": 272,
+                  "name": "Time 20:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "u1teUx",
+                  "x": 52,
+                  "y": 325.5,
+                  "name": "Grid line 20:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "dytgt",
+                  "x": 4,
+                  "y": 318.5,
+                  "name": "Time 20:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "GzCxs",
+                  "x": 52,
+                  "y": 372,
+                  "name": "Grid line 21:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "e2UGj9",
+                  "x": 4,
+                  "y": 365,
+                  "name": "Time 21:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "21:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "y3Nxfh",
+                  "x": 164,
+                  "y": 0,
+                  "name": "Column rule 1",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Tp7GK",
+                  "x": 276,
+                  "y": 0,
+                  "name": "Column rule 2",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "frame",
+                  "id": "G1Si4",
+                  "x": 54,
+                  "y": 94,
+                  "name": "Card 南洋派對 N.Y.P.D.",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "c0pk88",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:00-18:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CpAaE",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "南洋派對 N.Y.P.D.",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H6ze96",
+                  "x": 54,
+                  "y": 233.5,
+                  "name": "Card Queens of the Stone Age",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TK8XI",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:30-20:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r6CZz",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Queens of the Stone Age",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c4IRo",
+                  "x": 166,
+                  "y": 24.25,
+                  "name": "Card Pami",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XlN1D",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:15-18:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B1CDTI",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Pami",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "plo6b",
+                  "x": 166,
+                  "y": 140.5,
+                  "name": "Card Sleaford Mods",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zEzjj",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZWSm6",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Sleaford Mods",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "n19K6",
+                  "x": 166,
+                  "y": 303.25,
+                  "name": "Card Hush",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PBLLU",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:15-21:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JVagh",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Hush",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lBR17",
+                  "x": 278,
+                  "y": 1,
+                  "name": "Card Lucid Gang ft. Ruje, Rohann",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#98F5D4",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f9uwIw",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:00-17:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tCYw5",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Lucid Gang ft. Ruje, Rohann",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pRY6X",
+                  "x": 278,
+                  "y": 140.5,
+                  "name": "Card Chanpan",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#98F5D4",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NceIQ",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "J69idq",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Chanpan",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l41UM",
+                  "x": 278,
+                  "y": 280,
+                  "name": "Card Loisey x Gill Mok",
+                  "clip": true,
+                  "width": 104,
+                  "height": 75.5,
+                  "fill": "#98F5D4",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "toBIp",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:00-20:50",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VgDp2",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Loisey x Gill Mok",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "XUoLp",
+          "name": "Metrics",
+          "fill": "#5A736A",
+          "content": "wishlist holds Fri only · Sat renders at full strength · 0 muted · 0 promoted",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
     }
   ],
   "fileToken": "ceb79414-5491-4848-b93d-1e405a424aae"
