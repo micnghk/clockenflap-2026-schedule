@@ -6,9 +6,62 @@
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Clockenflap 2026">
+    <meta name="theme-color" content="#E8757C">
     
-    <link rel="apple-touch-icon" href="https://instagram.fmnl3-2.fna.fbcdn.net/v/t51.2885-19/497452560_18499793737011857_2819526722575145502_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fmnl3-2.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QGWlTR7iFVdThfI2B6L9TMi02gOlQl2crQ_mKHlKnqD4CDfVxnjNVfdiOqv5ZQUwow&_nc_ohc=THZdTh0eHYMQ7kNvwGUik7f&_nc_gid=8yHCm6pwdluO6Tv0Tn827Q&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfjOxlN5h89Q9tLo4djQ5zGipuRiIOocXPXL8ZuxKeXFtw&oe=69274362&_nc_sid=1e20d2">
+    <!-- Official Clockenflap Live Nation CDN Bookmark & Home Screen Icons -->
+    <link rel="icon" type="image/x-icon" href="https://www.clockenflap.com/favicon.ico">
+    <link rel="shortcut icon" href="https://networksites.livenationinternational.com/networksites/myigqxlv/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg">
+    <link rel="apple-touch-icon" sizes="180x180" id="apple-touch-icon" href="https://networksites.livenationinternational.com/networksites/myigqxlv/apple-touch-icon.png">
+
+    <script>
+        // Ensure iOS Safari Home Screen bookmarks always have a crisp 180x180 PNG emblem
+        // even if cross-origin apple-touch-icon paths differ or fail offline
+        (function initClockenflapBookmarkIcon() {
+            const touchLink = document.getElementById('apple-touch-icon');
+            if (!touchLink) return;
+
+            function generateFallbackPng() {
+                try {
+                    const size = 180;
+                    const canvas = document.createElement('canvas');
+                    canvas.width = size;
+                    canvas.height = size;
+                    const ctx = canvas.getContext('2d');
+                    if (!ctx) return;
+
+                    // 2026 Coral Rose background matching brand header
+                    ctx.fillStyle = '#E8757C';
+                    ctx.fillRect(0, 0, size, size);
+
+                    // Subtle inner framing ring in forest green
+                    ctx.strokeStyle = 'rgba(22, 66, 52, 0.18)';
+                    ctx.lineWidth = 4;
+                    ctx.strokeRect(10, 10, size - 20, size - 20);
+
+                    // Bold Clockenflap C emblem + 2026 badge
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.font = '800 92px Inter, -apple-system, BlinkMacSystemFont, sans-serif';
+                    ctx.fillText('C', size / 2, size / 2 - 12);
+
+                    ctx.fillStyle = '#164234';
+                    ctx.font = '800 22px Inter, -apple-system, BlinkMacSystemFont, sans-serif';
+                    ctx.fillText('2026', size / 2, size - 32);
+
+                    touchLink.href = canvas.toDataURL('image/png');
+                } catch (e) {
+                    // Keep primary CDN href if canvas generation is blocked
+                }
+            }
+
+            const probe = new Image();
+            probe.onerror = generateFallbackPng;
+            probe.src = touchLink.href;
+        })();
+    </script>
 
     <!-- Google Fonts: Inter & Noto Sans Hong Kong -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
