@@ -18,13 +18,14 @@
     <title>Clockenflap 2026 Timetable</title>
     <style>
         :root {
-            --col-width: 108px; 
+            --col-width: calc((100vw - var(--time-col-width)) / 3); 
             --time-col-width: 50px;
             --header-height: 50px;
             --font-main: 'Inter', 'Noto Sans HK', -apple-system, BlinkMacSystemFont, sans-serif;
             
             /* Official 2026 Poster Palette - Light Mode */
             --bg-color: #FAF3F3;
+            --outer-bg: #EFE2E3;
             --card-bg: #FAF3F3;
             --text-main: #164234;
             --text-muted: #5A736A;
@@ -46,12 +47,22 @@
             --color-robot: #F9F49B;
             --color-polytechnic: #F49CA6;
             --color-minkymax: #9DF4D3;
+
+            /* Accessible Dimmed Wishlist Focus Tokens - Light Mode (>= 5.5:1 contrast) */
+            --dim-yellow-bg: #E8DFB5;
+            --dim-pink-bg: #E7CDD0;
+            --dim-mint-bg: #CDE3DC;
+            --dim-text: #2E453D;
+            --dim-border: rgba(22, 66, 52, 0.14);
+            --wishlisted-border: #164234;
+            --wishlisted-shadow: 0 4px 12px rgba(22, 66, 52, 0.28);
         }
 
         /* Dark Mode Overrides */
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-color: #0E261E;
+                --outer-bg: #081712;
                 --card-bg: #122E25;
                 --text-main: #FAF3F3;
                 --text-muted: #A7C2B8;
@@ -65,6 +76,15 @@
                 --tab-active-bg: #F6F08A;
                 --tab-active-text: #164234;
                 --modal-bg: #16382D;
+
+                /* Accessible Dimmed Wishlist Focus Tokens - Dark Mode (>= 5.2:1 contrast) */
+                --dim-yellow-bg: #3A3928;
+                --dim-pink-bg: #3D2D31;
+                --dim-mint-bg: #273B35;
+                --dim-text: #B8C7C1;
+                --dim-border: rgba(255, 255, 255, 0.08);
+                --wishlisted-border: #F6F08A;
+                --wishlisted-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
             }
         }
 
@@ -85,11 +105,21 @@
 
         body {
             font-family: var(--font-main);
-            background-color: var(--bg-color);
+            background-color: var(--outer-bg);
             color: var(--text-main);
             display: flex;
             flex-direction: column;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .app-shell {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
         }
 
         button, input, select, textarea {
@@ -105,6 +135,7 @@
             padding: 12px 0;
             padding-top: max(12px, env(safe-area-inset-top)); 
             z-index: 110;
+            flex-shrink: 0;
         }
         
         .brand-logo {
@@ -120,6 +151,7 @@
             color: var(--tab-text);
             box-shadow: 0 2px 5px rgba(22, 66, 52, 0.25);
             z-index: 100;
+            flex-shrink: 0;
         }
         .tab {
             flex: 1;
@@ -143,6 +175,7 @@
         /* Main Schedule Container */
         .schedule-viewport {
             flex: 1;
+            width: 100%;
             overflow: auto;
             position: relative;
             background: var(--bg-color);
@@ -154,7 +187,7 @@
             display: grid;
             grid-template-columns: var(--time-col-width) repeat(6, var(--col-width));
             position: relative;
-            min-width: fit-content;
+            min-width: max-content;
             padding-bottom: 85px;
             background: var(--card-bg);
             transition: 0.3s;
@@ -245,7 +278,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            transition: opacity 0.3s, transform 0.1s, border 0.3s;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.1s ease, border-color 0.25s ease, box-shadow 0.25s ease;
             z-index: 2;
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
@@ -256,16 +289,37 @@
             transform: scale(0.98);
         }
 
-        /* WISHLIST STYLES */
-        .schedule-grid.has-wishlist .artist-block {
-            opacity: 0.3; 
-            filter: grayscale(65%);
+        /* WISHLIST FOCUS STYLES (Accessible High-Contrast Muted Tones) */
+        .schedule-grid.has-wishlist .artist-block:not(.wishlisted) {
+            opacity: 1;
+            filter: none;
+            color: var(--dim-text);
+            border: 1px solid var(--dim-border);
+            box-shadow: none;
         }
+        .schedule-grid.has-wishlist .artist-block:not(.wishlisted) .artist-time {
+            color: var(--dim-text);
+            opacity: 0.9;
+        }
+        .schedule-grid.has-wishlist .artist-block.stage-Harbourflap:not(.wishlisted),
+        .schedule-grid.has-wishlist .artist-block.stage-Robot:not(.wishlisted) {
+            background-color: var(--dim-yellow-bg);
+        }
+        .schedule-grid.has-wishlist .artist-block.stage-Orbit:not(.wishlisted),
+        .schedule-grid.has-wishlist .artist-block.stage-Polytechnic:not(.wishlisted) {
+            background-color: var(--dim-pink-bg);
+        }
+        .schedule-grid.has-wishlist .artist-block.stage-Park:not(.wishlisted),
+        .schedule-grid.has-wishlist .artist-block.stage-Minkymax:not(.wishlisted) {
+            background-color: var(--dim-mint-bg);
+        }
+
         .schedule-grid.has-wishlist .artist-block.wishlisted {
             opacity: 1;
             filter: none;
-            border: 2px solid #164234;
-            box-shadow: 0 4px 12px rgba(22, 66, 52, 0.32);
+            color: #164234;
+            border: 2px solid var(--wishlisted-border);
+            box-shadow: var(--wishlisted-shadow);
             z-index: 5;
         }
         .artist-block.wishlisted::after {
@@ -283,6 +337,7 @@
             margin-bottom: 2px;
             font-weight: 600;
             letter-spacing: 0.01em;
+            transition: color 0.25s ease;
         }
 
         /* Stage Colors */
@@ -297,7 +352,7 @@
         #current-time-line {
             position: absolute;
             left: var(--time-col-width);
-            right: 0;
+            width: calc(var(--col-width) * 6);
             height: 2px;
             background: #E8757C;
             z-index: 15;
@@ -326,6 +381,66 @@
             display: flex;
             gap: 10px;
             padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        /* Smartphone / Narrow Screens: 3 stages visible + horizontal swipe */
+        @media (max-width: 767px) {
+            :root {
+                --col-width: calc((100vw - var(--time-col-width)) / 3);
+            }
+            .schedule-viewport {
+                width: 100%;
+                overflow: auto;
+            }
+            .schedule-grid {
+                grid-template-columns: var(--time-col-width) repeat(6, var(--col-width));
+                min-width: max-content;
+            }
+            #current-time-line {
+                left: var(--time-col-width);
+                width: calc(var(--col-width) * 6);
+                right: auto;
+            }
+        }
+
+        /* Desktop & Wider Screens: 75% centered container, all 6 stages visible at once */
+        @media (min-width: 768px) {
+            :root {
+                --col-width: minmax(0, 1fr);
+            }
+            .app-shell {
+                width: 75vw;
+                max-width: 1200px;
+                min-width: 720px;
+                margin: 0 auto;
+                border-left: 1px solid var(--border-color);
+                border-right: 1px solid var(--border-color);
+                box-shadow: 0 0 32px rgba(22, 66, 52, 0.14);
+            }
+            .schedule-viewport {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            .schedule-grid {
+                grid-template-columns: var(--time-col-width) repeat(6, minmax(0, 1fr));
+                width: 100%;
+                min-width: 0;
+            }
+            .artist-block {
+                font-size: 11px;
+                padding: 5px 7px;
+            }
+            .artist-time {
+                font-size: 9.5px;
+            }
+            #current-time-line {
+                left: var(--time-col-width);
+                right: 0;
+                width: auto;
+            }
+            .controls {
+                right: calc(max((100vw - 75vw) / 2, (100vw - 1200px) / 2) + 20px);
+            }
         }
         .controls button {
             background: rgba(22, 66, 52, 0.92);
@@ -504,23 +619,25 @@
 </head>
 <body>
 
-    <div class="brand-header">
-        <img src="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg" alt="Clockenflap 2026" class="brand-logo">
-    </div>
+    <div class="app-shell">
+        <div class="brand-header">
+            <img src="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg" alt="Clockenflap 2026" class="brand-logo">
+        </div>
 
-    <div class="tabs">
-        <div class="tab active" onclick="switchDay('Fri', this)">DEC 4 (FRI)</div>
-        <div class="tab" onclick="switchDay('Sat', this)">DEC 5 (SAT)</div>
-        <div class="tab" onclick="switchDay('Sun', this)">DEC 6 (SUN)</div>
-    </div>
+        <div class="tabs">
+            <div class="tab active" onclick="switchDay('Fri', this)">DEC 4 (FRI)</div>
+            <div class="tab" onclick="switchDay('Sat', this)">DEC 5 (SAT)</div>
+            <div class="tab" onclick="switchDay('Sun', this)">DEC 6 (SUN)</div>
+        </div>
 
-    <div class="schedule-viewport" id="viewport">
-        <div class="schedule-grid" id="schedule-container"></div>
-        <div id="current-time-line"></div>
-    </div>
+        <div class="schedule-viewport" id="viewport">
+            <div class="schedule-grid" id="schedule-container"></div>
+            <div id="current-time-line"></div>
+        </div>
 
-    <div class="controls">
-        <button id="btn-reset" onclick="clearWishlist()">Reset Wishlist</button>
+        <div class="controls">
+            <button id="btn-reset" onclick="clearWishlist()">Reset Wishlist</button>
+        </div>
     </div>
 
     <div class="modal-overlay" id="modal">
@@ -712,8 +829,10 @@
     // --- CORE RENDER ---
     function renderSchedule(day) {
         const container = document.getElementById('schedule-container');
+        const dayData = rawData.filter(item => item.d === day);
+        const dayHasWishlist = dayData.some(item => wishlist.has(createId(item)));
         
-        if (wishlist.size > 0) {
+        if (dayHasWishlist) {
             container.classList.add('has-wishlist');
         } else {
             container.classList.remove('has-wishlist');
@@ -764,8 +883,6 @@
         }
 
         // 3. Artists
-        const dayData = rawData.filter(item => item.d === day);
-        
         dayData.forEach(item => {
             const {start, end} = getStartEndMins(item.t);
             const startOffset = start - (startHour * 60);
