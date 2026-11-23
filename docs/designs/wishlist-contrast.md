@@ -31,7 +31,7 @@ The focus state destroys the timetable it is meant to help you read.
 
 1.  **Text contrast collapses.** Non-wishlisted name text measures 1.42–1.71:1 in
     light mode and 1.65–2.27:1 in dark; the time label carries its own
-    `opacity: 0.88` (`index.html:279-282`) and falls to 1.36–1.59 and 1.56–2.08.
+    `opacity: 0.88` and falls to 1.36–1.59 and 1.56–2.08.
     Both are far below 4.5:1.
 2.  **Stage identity erodes.** `grayscale(65%)` removes the hue that separates the
     three stage families, and the opacity blend pulls all six fills toward the
@@ -276,7 +276,7 @@ ordering holds, boundary margins differ.
     layer margin 1.67–3.18:1.
 *   **Cons**: muted text drops to 5.00:1 and the muted cards read as dark slabs
     rather than tinted paper.
-*   **Reason for Rejection**: 5.00:1 leaves 0.5 of margin on 7.5px type, and the
+*   **Reason for Rejection**: 5.00:1 leaves 0.5 of margin on 9px type, and the
     1.4.11 gain is on a decorative boundary, not the text the design exists to
     fix. Retained as the option if 1.4.11 is a hard requirement.
 
@@ -382,10 +382,11 @@ HTML. The only stored value is a list of artist IDs under
     `#FF6571` would raise text-on-fill contrast and lower the card-to-page
     boundary margin, which is already the weakest number here.
 *   **Larger card type**: the artist name went 10px → 11px and the time label
-    8.5px → 9px. Measured at 390px across 83 cards: the tightest card fills 71%
-    of its inner height, nothing overflows, and the longest name still wraps to
-    four lines. 12px/10px also fits (77%), but a card below about 70px — a
-    20-minute set — would clip at that size.
+    8.5px → 9px. Measured in the browser at 390px on all three days (21, 31 and
+    31 cards): no card overflows, the tightest fills 71% of its inner height, and
+    the longest name still wraps to four lines. The margin shrinks with set
+    length — a card under about 70px, a set shorter than 35 minutes, would clip
+    at 12px/10px, and a 20-minute set clips at 11px/9px as well.
 *   **Responsive grid geometry**: landed separately in `12151bf`
     (`repeat(6, minmax(var(--col-width), 1fr))`), so the "no grid geometry
     change" non-goal above still reads true of this design — it did not include
