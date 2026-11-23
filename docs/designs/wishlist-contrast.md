@@ -381,6 +381,12 @@ HTML. The only stored value is a list of artist IDs under
     `#FF6571` would raise text-on-fill contrast and lower the card-to-page
     boundary margin, which is already the weakest number here.
 *   **Remove `user-scalable=no`**: the largest single legibility win available.
+*   **Responsive grid geometry**: landed separately in `12151bf`
+    (`repeat(6, minmax(var(--col-width), 1fr))`), so the "no grid geometry
+    change" non-goal above still reads true of this design — it did not include
+    that change. The contrast figures here are colour-only and unaffected by
+    column width; what the wider columns change is how much text wraps inside a
+    card.
 
 --------------------------------------------------------------------------------
 
