@@ -46,6 +46,19 @@
             --color-robot: #F9F49B;
             --color-polytechnic: #F49CA6;
             --color-minkymax: #9DF4D3;
+
+            /* Card ink: official site token. Muting needs it: at #164234 a
+               4.5:1 text floor caps the muted fill at L* 67.2 and the layer
+               margin collapses to 1.02:1 on Orbit. */
+            --card-ink: #001A14;
+
+            /* Muted fills: shipped hue held, L* 60, C* x0.45 (D65, sRGB). */
+            --color-harbourflap-muted: #969269;
+            --color-orbit-muted: #AF868A;
+            --color-park-muted: #74988A;
+            --color-robot-muted: #95926E;
+            --color-polytechnic-muted: #AE878A;
+            --color-minkymax-muted: #75988A;
         }
 
         /* Dark Mode Overrides */
@@ -65,6 +78,10 @@
                 --tab-active-bg: #F6F08A;
                 --tab-active-text: #164234;
                 --modal-bg: #16382D;
+                /* Stage fills and --card-ink are intentionally NOT overridden:
+                   cards stay light islands on dark chrome by design, and the
+                   measured ordering (wishlisted > muted against --card-bg)
+                   holds in this mode. */
             }
         }
 
@@ -238,14 +255,16 @@
             padding: 4px 5px;
             font-size: 10px;
             font-weight: 800;
-            color: #164234; 
+            color: var(--card-ink);
+            background-color: var(--stage-fill, transparent);
+            border: 2px solid transparent;
             overflow: hidden;
             position: relative;
             box-shadow: 0 1px 2px rgba(22, 66, 52, 0.12);
             display: flex;
             flex-direction: column;
             justify-content: center;
-            transition: opacity 0.3s, transform 0.1s, border 0.3s;
+            transition: transform 0.1s, border-color 0.3s;
             z-index: 2;
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
@@ -258,14 +277,15 @@
 
         /* WISHLIST STYLES */
         .schedule-grid.has-wishlist .artist-block {
-            opacity: 0.3; 
-            filter: grayscale(65%);
+            background-color: var(--stage-fill-muted, var(--stage-fill));
         }
+        /* Redeclares the background on purpose: this rule wins on specificity
+           but specificity does not inherit declarations. Without this line the
+           muted rule above is the only background that applies. */
         .schedule-grid.has-wishlist .artist-block.wishlisted {
-            opacity: 1;
-            filter: none;
-            border: 2px solid #164234;
-            box-shadow: 0 4px 12px rgba(22, 66, 52, 0.32);
+            background-color: var(--stage-fill, transparent);
+            border-color: var(--card-ink);
+            box-shadow: 0 6px 16px rgba(0, 26, 20, 0.38);
             z-index: 5;
         }
         .artist-block.wishlisted::after {
@@ -273,25 +293,25 @@
             position: absolute;
             top: 2px;
             right: 2px;
-            font-size: 8px;
+            font-size: 11px;
+            text-shadow: 0 0 1.5px #FFFFFF;
         }
 
         .artist-time {
             font-size: 8.5px;
-            color: #164234;
-            opacity: 0.88;
+            color: var(--card-ink);
             margin-bottom: 2px;
             font-weight: 600;
             letter-spacing: 0.01em;
         }
 
         /* Stage Colors */
-        .stage-Harbourflap { background-color: var(--color-harbourflap); }
-        .stage-Orbit { background-color: var(--color-orbit); }
-        .stage-Park { background-color: var(--color-park); }
-        .stage-Robot { background-color: var(--color-robot); }
-        .stage-Polytechnic { background-color: var(--color-polytechnic); }
-        .stage-Minkymax { background-color: var(--color-minkymax); }
+        .stage-Harbourflap { --stage-fill: var(--color-harbourflap); --stage-fill-muted: var(--color-harbourflap-muted); }
+        .stage-Orbit { --stage-fill: var(--color-orbit); --stage-fill-muted: var(--color-orbit-muted); }
+        .stage-Park { --stage-fill: var(--color-park); --stage-fill-muted: var(--color-park-muted); }
+        .stage-Robot { --stage-fill: var(--color-robot); --stage-fill-muted: var(--color-robot-muted); }
+        .stage-Polytechnic { --stage-fill: var(--color-polytechnic); --stage-fill-muted: var(--color-polytechnic-muted); }
+        .stage-Minkymax { --stage-fill: var(--color-minkymax); --stage-fill-muted: var(--color-minkymax-muted); }
 
         /* Current Time Line */
         #current-time-line {
@@ -702,7 +722,13 @@
 
     // --- STATE ---
     let currentDay = determineInitialDay();
-    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist2026')) || []);
+    let wishlist = new Set();
+    try {
+        const stored = JSON.parse(localStorage.getItem('clockenflapWishlist2026'));
+        if (Array.isArray(stored)) wishlist = new Set(stored);
+    } catch (e) {
+        wishlist = new Set();
+    }
     let selectedArtistId = null;
     let currentArtistQuery = "";
     let fallbackTimer = null;
@@ -712,16 +738,15 @@
     // --- CORE RENDER ---
     function renderSchedule(day) {
         const container = document.getElementById('schedule-container');
-        
-        if (wishlist.size > 0) {
-            container.classList.add('has-wishlist');
-        } else {
-            container.classList.remove('has-wishlist');
-        }
-
         container.innerHTML = ''; 
 
         const startHour = getGridStartHour(day);
+        const dayData = rawData.filter(item => item.d === day);
+
+        // The focus class is set after rendering, from the blocks that were
+        // actually promoted. A wishlist holding only other days' artists must
+        // not mute this day with nothing promoted.
+        let promoted = false;
 
         // 1. Header Row
         const corner = document.createElement('div');
@@ -764,8 +789,6 @@
         }
 
         // 3. Artists
-        const dayData = rawData.filter(item => item.d === day);
-        
         dayData.forEach(item => {
             const {start, end} = getStartEndMins(item.t);
             const startOffset = start - (startHour * 60);
@@ -783,6 +806,7 @@
                 
                 if (wishlist.has(artistId)) {
                     div.classList.add('wishlisted');
+                    promoted = true;
                 }
 
                 div.style.gridColumn = colIndex;
@@ -794,6 +818,8 @@
                 container.appendChild(div);
             }
         });
+
+        container.classList.toggle('has-wishlist', promoted);
     }
 
     // --- MODAL LOGIC ---

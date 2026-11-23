@@ -1,0 +1,3138 @@
+{
+  "version": "2.25",
+  "children": [
+    {
+      "type": "frame",
+      "id": "Owah3",
+      "x": 60,
+      "y": 80,
+      "name": "Board BEFORE — light",
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "Ql2JJ",
+          "name": "Board title",
+          "fill": "#001A14",
+          "content": "BEFORE — light",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "dYD65",
+          "name": "Screen",
+          "clip": true,
+          "width": 390,
+          "height": 526,
+          "fill": "#FAF3F3",
+          "stroke": "#E8BFC2",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "UJuW5",
+              "name": "Brand bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "#E8757C",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QACuR",
+                  "name": "Wordmark",
+                  "fill": "#FFFFFF",
+                  "content": "Clockenflap",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yrJRJ",
+              "name": "Day tabs",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#103227",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Rlq9N",
+                  "name": "Tab DEC 4 (FRI)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#F6F08A",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "npwFz",
+                      "name": "Tab label",
+                      "fill": "#164234",
+                      "content": "DEC 4 (FRI)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PKbUm",
+                  "name": "Tab DEC 5 (SAT)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rHEWb",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 5 (SAT)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jK93V",
+                  "name": "Tab DEC 6 (SUN)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KbgbB",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 6 (SUN)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g85KWx",
+              "name": "Stage header",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "#164234",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FHceA",
+                  "name": "Corner",
+                  "width": 52,
+                  "height": 42,
+                  "fill": "#164234"
+                },
+                {
+                  "type": "frame",
+                  "id": "dLnhH",
+                  "name": "Stage HARBOURFLAP",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WEERI",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "HARBOURFLAP",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hk799",
+                  "name": "Stage ORBIT",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g5tyIA",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "ORBIT",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DFemZ",
+                  "name": "Stage PARK",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f9w3Ea",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "PARK",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m830Tr",
+              "name": "Grid",
+              "width": 390,
+              "height": 380,
+              "fill": "#FAF3F3",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "Zb5Cj",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Time column",
+                  "fill": "#164234",
+                  "width": 52,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "NT2RF",
+                  "x": 52,
+                  "y": 0,
+                  "name": "Grid line 17:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "A29aS",
+                  "x": 4,
+                  "y": 2,
+                  "name": "Time 17:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "weEDN",
+                  "x": 52,
+                  "y": 46.5,
+                  "name": "Grid line 17:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Dth1a",
+                  "x": 4,
+                  "y": 39.5,
+                  "name": "Time 17:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "D5d0Bt",
+                  "x": 52,
+                  "y": 93,
+                  "name": "Grid line 18:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "gEgIn",
+                  "x": 4,
+                  "y": 86,
+                  "name": "Time 18:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "IkUZx",
+                  "x": 52,
+                  "y": 139.5,
+                  "name": "Grid line 18:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "MRTsg",
+                  "x": 4,
+                  "y": 132.5,
+                  "name": "Time 18:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "TZNPP",
+                  "x": 52,
+                  "y": 186,
+                  "name": "Grid line 19:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "tiWRC",
+                  "x": 4,
+                  "y": 179,
+                  "name": "Time 19:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "X692oW",
+                  "x": 52,
+                  "y": 232.5,
+                  "name": "Grid line 19:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "H4YtDQ",
+                  "x": 4,
+                  "y": 225.5,
+                  "name": "Time 19:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "q6mZf",
+                  "x": 52,
+                  "y": 279,
+                  "name": "Grid line 20:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "aYIZ6",
+                  "x": 4,
+                  "y": 272,
+                  "name": "Time 20:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "svCsR",
+                  "x": 52,
+                  "y": 325.5,
+                  "name": "Grid line 20:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "NmrKo",
+                  "x": 4,
+                  "y": 318.5,
+                  "name": "Time 20:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "a1wKW",
+                  "x": 52,
+                  "y": 372,
+                  "name": "Grid line 21:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "P6yiQb",
+                  "x": 4,
+                  "y": 365,
+                  "name": "Time 21:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "21:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "T8v52c",
+                  "x": 164,
+                  "y": 0,
+                  "name": "Column rule 1",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "uE44w",
+                  "x": 276,
+                  "y": 0,
+                  "name": "Column rule 2",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "frame",
+                  "id": "RTC2V",
+                  "x": 166,
+                  "y": 94,
+                  "name": "Card TOMII",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#EADBDC",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ojd2T",
+                      "name": "Time",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:00-18:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TCccj",
+                      "name": "Artist",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "TOMII",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hoVC1",
+                  "x": 166,
+                  "y": 210.25,
+                  "name": "Card SOFI TUKKER",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#EADBDC",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "beK8V",
+                      "name": "Time",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:15-20:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "afiwk",
+                      "name": "Artist",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SOFI TUKKER",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "idty0",
+                  "x": 278,
+                  "y": 233.5,
+                  "name": "Card FAZERDAZE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#EAEFEC",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zfZOK",
+                      "name": "Time",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:30-20:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GsTsx",
+                      "name": "Artist",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "FAZERDAZE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "q1otiL",
+                  "x": 54,
+                  "y": 280,
+                  "name": "Card MALCOLM TODD",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#F6F1E6",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TEYKV",
+                      "name": "Time",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:00-21:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VBnrL",
+                      "name": "Artist",
+                      "fill": "#B6BEBA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MALCOLM TODD",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "p9Pg2",
+                  "x": 166,
+                  "y": 70.75,
+                  "name": "Card GOODNIGHT LILLIE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#164234",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e1l8tx",
+                      "name": "Time",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:45-18:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "E5Yjj",
+                      "name": "Artist",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GOODNIGHT LILLIE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zck9m",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ixfH0",
+                  "x": 54,
+                  "y": 140.5,
+                  "name": "Card GORDON FLANDERS",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#164234",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SyDHS",
+                      "name": "Time",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zyTeI",
+                      "name": "Artist",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GORDON FLANDERS",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s4Ihc",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "amtm8",
+          "name": "Metrics",
+          "fill": "#5A736A",
+          "content": "name 1.42-1.71:1 · time 1.36-1.59:1 · opacity 0.3 + grayscale 65%",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jMZ3c",
+      "x": 500,
+      "y": 80,
+      "name": "Board AFTER — light",
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "bIhaG",
+          "name": "Board title",
+          "fill": "#001A14",
+          "content": "AFTER — light",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "NYPdK",
+          "name": "Screen",
+          "clip": true,
+          "width": 390,
+          "height": 526,
+          "fill": "#FAF3F3",
+          "stroke": "#E8BFC2",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "b4DSCp",
+              "name": "Brand bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "#E8757C",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "f3Pfpa",
+                  "name": "Wordmark",
+                  "fill": "#FFFFFF",
+                  "content": "Clockenflap",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M3UGXC",
+              "name": "Day tabs",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#103227",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gSs8h",
+                  "name": "Tab DEC 4 (FRI)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#F6F08A",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "igd8M",
+                      "name": "Tab label",
+                      "fill": "#164234",
+                      "content": "DEC 4 (FRI)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y4YA9",
+                  "name": "Tab DEC 5 (SAT)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A5YuKB",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 5 (SAT)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gvI6S",
+                  "name": "Tab DEC 6 (SUN)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#103227",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ttr0z",
+                      "name": "Tab label",
+                      "fill": "#FFFFFF",
+                      "content": "DEC 6 (SUN)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uu2AW",
+              "name": "Stage header",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "#164234",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VWUaL",
+                  "name": "Corner",
+                  "width": 52,
+                  "height": 42,
+                  "fill": "#164234"
+                },
+                {
+                  "type": "frame",
+                  "id": "j1ojXA",
+                  "name": "Stage HARBOURFLAP",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RE32b",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "HARBOURFLAP",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "trE2a",
+                  "name": "Stage ORBIT",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "O0D7m1",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "ORBIT",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lS4b7",
+                  "name": "Stage PARK",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yQ2eJ",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "PARK",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "n7ThV",
+              "name": "Grid",
+              "width": 390,
+              "height": 380,
+              "fill": "#FAF3F3",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "P7Cbh",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Time column",
+                  "fill": "#164234",
+                  "width": 52,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "I1G0ut",
+                  "x": 52,
+                  "y": 0,
+                  "name": "Grid line 17:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "C5rbs",
+                  "x": 4,
+                  "y": 2,
+                  "name": "Time 17:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Rouxz",
+                  "x": 52,
+                  "y": 46.5,
+                  "name": "Grid line 17:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "EfcMV",
+                  "x": 4,
+                  "y": 39.5,
+                  "name": "Time 17:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Y7AEZ",
+                  "x": 52,
+                  "y": 93,
+                  "name": "Grid line 18:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "MoMcJ",
+                  "x": 4,
+                  "y": 86,
+                  "name": "Time 18:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "c8CIQn",
+                  "x": 52,
+                  "y": 139.5,
+                  "name": "Grid line 18:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "lQuGu",
+                  "x": 4,
+                  "y": 132.5,
+                  "name": "Time 18:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "kZ6K5",
+                  "x": 52,
+                  "y": 186,
+                  "name": "Grid line 19:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "w45oW2",
+                  "x": 4,
+                  "y": 179,
+                  "name": "Time 19:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "FjPm4",
+                  "x": 52,
+                  "y": 232.5,
+                  "name": "Grid line 19:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "WkUd8",
+                  "x": 4,
+                  "y": 225.5,
+                  "name": "Time 19:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ASpSl",
+                  "x": 52,
+                  "y": 279,
+                  "name": "Grid line 20:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Amacf",
+                  "x": 4,
+                  "y": 272,
+                  "name": "Time 20:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "VPmWJ",
+                  "x": 52,
+                  "y": 325.5,
+                  "name": "Grid line 20:30",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "QTJ9R",
+                  "x": 4,
+                  "y": 318.5,
+                  "name": "Time 20:30",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Ybppz",
+                  "x": 52,
+                  "y": 372,
+                  "name": "Grid line 21:00",
+                  "fill": "#E8BFC2",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "kM1Rr",
+                  "x": 4,
+                  "y": 365,
+                  "name": "Time 21:00",
+                  "fill": "#E8757C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "21:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "kxRaK",
+                  "x": 164,
+                  "y": 0,
+                  "name": "Column rule 1",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "G8GO3",
+                  "x": 276,
+                  "y": 0,
+                  "name": "Column rule 2",
+                  "fill": "#E8BFC2",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "frame",
+                  "id": "sysof",
+                  "x": 166,
+                  "y": 94,
+                  "name": "Card TOMII",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#AF868A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QzKhU",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:00-18:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "X5Zvwd",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "TOMII",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XtZS4",
+                  "x": 166,
+                  "y": 210.25,
+                  "name": "Card SOFI TUKKER",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#AF868A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JGgza",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:15-20:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "t0lqmA",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SOFI TUKKER",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kpGhn",
+                  "x": 278,
+                  "y": 233.5,
+                  "name": "Card FAZERDAZE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#74988A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CcDJy",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:30-20:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "t9wPa",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "FAZERDAZE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y2Bwq3",
+                  "x": 54,
+                  "y": 280,
+                  "name": "Card MALCOLM TODD",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#969269",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ijx9F",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:00-21:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Io1lG",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MALCOLM TODD",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E8IUpn",
+                  "x": 166,
+                  "y": 70.75,
+                  "name": "Card GOODNIGHT LILLIE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#001A14",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rkSOl",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:45-18:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mibZc",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GOODNIGHT LILLIE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LtO1V",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x3cZ1U",
+                  "x": 54,
+                  "y": 140.5,
+                  "name": "Card GORDON FLANDERS",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#001A14",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GUXIq",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uNJVr",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GORDON FLANDERS",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "U7w1Hg",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Hyn3i",
+          "name": "Metrics",
+          "fill": "#5A736A",
+          "content": "muted text 5.70:1 · wishlisted 8.36+ · layer 1.47:1 · ink #001A14",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "b3u3uX",
+      "x": 940,
+      "y": 80,
+      "name": "Board BEFORE — dark",
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "WToRf",
+          "name": "Board title",
+          "fill": "#001A14",
+          "content": "BEFORE — dark",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "k5wjM",
+          "name": "Screen",
+          "clip": true,
+          "width": 390,
+          "height": 526,
+          "fill": "#122E25",
+          "stroke": "#274D40",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "H52Dlf",
+              "name": "Brand bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "#D9656C",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wd8Y5",
+                  "name": "Wordmark",
+                  "fill": "#FFFFFF",
+                  "content": "Clockenflap",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iaXTq",
+              "name": "Day tabs",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#091813",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O39QX",
+                  "name": "Tab DEC 4 (FRI)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#F6F08A",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zzWJc",
+                      "name": "Tab label",
+                      "fill": "#164234",
+                      "content": "DEC 4 (FRI)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v8CHa",
+                  "name": "Tab DEC 5 (SAT)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#091813",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sThDr",
+                      "name": "Tab label",
+                      "fill": "#D7E5E0",
+                      "content": "DEC 5 (SAT)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "URkg6",
+                  "name": "Tab DEC 6 (SUN)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#091813",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "N2SLS",
+                      "name": "Tab label",
+                      "fill": "#D7E5E0",
+                      "content": "DEC 6 (SUN)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fYiMr",
+              "name": "Stage header",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "#0A1D17",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "c9sue",
+                  "name": "Corner",
+                  "width": 52,
+                  "height": 42,
+                  "fill": "#0A1D17"
+                },
+                {
+                  "type": "frame",
+                  "id": "QUAFE",
+                  "name": "Stage HARBOURFLAP",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MqFbA",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "HARBOURFLAP",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nMZRE",
+                  "name": "Stage ORBIT",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X2AMwd",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "ORBIT",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "efGfm",
+                  "name": "Stage PARK",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oUQy3",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "PARK",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Sftfj",
+              "name": "Grid",
+              "width": 390,
+              "height": 380,
+              "fill": "#122E25",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "oMovv",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Time column",
+                  "fill": "#0A1D17",
+                  "width": 52,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "YV1IE",
+                  "x": 52,
+                  "y": 0,
+                  "name": "Grid line 17:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "CcXrE",
+                  "x": 4,
+                  "y": 2,
+                  "name": "Time 17:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "c5PQU",
+                  "x": 52,
+                  "y": 46.5,
+                  "name": "Grid line 17:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "noUWg",
+                  "x": 4,
+                  "y": 39.5,
+                  "name": "Time 17:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ocy5B",
+                  "x": 52,
+                  "y": 93,
+                  "name": "Grid line 18:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "L6q0aX",
+                  "x": 4,
+                  "y": 86,
+                  "name": "Time 18:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "abXVG",
+                  "x": 52,
+                  "y": 139.5,
+                  "name": "Grid line 18:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Dj2Di",
+                  "x": 4,
+                  "y": 132.5,
+                  "name": "Time 18:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "jliGS",
+                  "x": 52,
+                  "y": 186,
+                  "name": "Grid line 19:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ZtCAv",
+                  "x": 4,
+                  "y": 179,
+                  "name": "Time 19:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "bsR1b",
+                  "x": 52,
+                  "y": 232.5,
+                  "name": "Grid line 19:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "WIYE7",
+                  "x": 4,
+                  "y": 225.5,
+                  "name": "Time 19:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "cB6lS",
+                  "x": 52,
+                  "y": 279,
+                  "name": "Grid line 20:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "GY4eF",
+                  "x": 4,
+                  "y": 272,
+                  "name": "Time 20:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "gN6UK",
+                  "x": 52,
+                  "y": 325.5,
+                  "name": "Grid line 20:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "y2yFrC",
+                  "x": 4,
+                  "y": 318.5,
+                  "name": "Time 20:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "os0b8",
+                  "x": 52,
+                  "y": 372,
+                  "name": "Grid line 21:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "DNjxS",
+                  "x": 4,
+                  "y": 365,
+                  "name": "Time 21:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "21:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "S0oMiF",
+                  "x": 164,
+                  "y": 0,
+                  "name": "Column rule 1",
+                  "fill": "#274D40",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "oypFd",
+                  "x": 276,
+                  "y": 0,
+                  "name": "Column rule 2",
+                  "fill": "#274D40",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "frame",
+                  "id": "ZdVVz",
+                  "x": 166,
+                  "y": 94,
+                  "name": "Card TOMII",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#47514C",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NdTnJ",
+                      "name": "Time",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:00-18:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GyGQh",
+                      "name": "Artist",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "TOMII",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PC7lT",
+                  "x": 166,
+                  "y": 210.25,
+                  "name": "Card SOFI TUKKER",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#47514C",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x1zDCy",
+                      "name": "Time",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:15-20:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y7LkhR",
+                      "name": "Artist",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SOFI TUKKER",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WPxUx",
+                  "x": 278,
+                  "y": 233.5,
+                  "name": "Card FAZERDAZE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#48655C",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gbi1u",
+                      "name": "Time",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:30-20:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HkCCV",
+                      "name": "Artist",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "FAZERDAZE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pf5um",
+                  "x": 54,
+                  "y": 280,
+                  "name": "Card MALCOLM TODD",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#546756",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oeD6o",
+                      "name": "Time",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:00-21:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BT9yv",
+                      "name": "Artist",
+                      "fill": "#13342A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MALCOLM TODD",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sQ3G7",
+                  "x": 166,
+                  "y": 70.75,
+                  "name": "Card GOODNIGHT LILLIE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#164234",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K73c7u",
+                      "name": "Time",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:45-18:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "m5CWO",
+                      "name": "Artist",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GOODNIGHT LILLIE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BqcLe",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g32GQB",
+                  "x": 54,
+                  "y": 140.5,
+                  "name": "Card GORDON FLANDERS",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#164234",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U1akm",
+                      "name": "Time",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XJGyP",
+                      "name": "Artist",
+                      "fill": "#164234",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GORDON FLANDERS",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iDX8j",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "DKhLq",
+          "name": "Metrics",
+          "fill": "#5A736A",
+          "content": "name 1.65-2.27:1 · time 1.56-2.08:1 · measured on --card-bg #122E25",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Lw6E8",
+      "x": 1380,
+      "y": 80,
+      "name": "Board AFTER — dark",
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "agbxr",
+          "name": "Board title",
+          "fill": "#001A14",
+          "content": "AFTER — dark",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "tByyw",
+          "name": "Screen",
+          "clip": true,
+          "width": 390,
+          "height": 526,
+          "fill": "#122E25",
+          "stroke": "#274D40",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y8FTfx",
+              "name": "Brand bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "#D9656C",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "b2jy1",
+                  "name": "Wordmark",
+                  "fill": "#FFFFFF",
+                  "content": "Clockenflap",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZM4hx",
+              "name": "Day tabs",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#091813",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IH8EE",
+                  "name": "Tab DEC 4 (FRI)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#F6F08A",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TC78F",
+                      "name": "Tab label",
+                      "fill": "#164234",
+                      "content": "DEC 4 (FRI)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L4MKH",
+                  "name": "Tab DEC 5 (SAT)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#091813",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Js9rX",
+                      "name": "Tab label",
+                      "fill": "#D7E5E0",
+                      "content": "DEC 5 (SAT)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A46Iks",
+                  "name": "Tab DEC 6 (SUN)",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "#091813",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lAhui",
+                      "name": "Tab label",
+                      "fill": "#D7E5E0",
+                      "content": "DEC 6 (SUN)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I7CaPH",
+              "name": "Stage header",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "#0A1D17",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E2PFXU",
+                  "name": "Corner",
+                  "width": 52,
+                  "height": 42,
+                  "fill": "#0A1D17"
+                },
+                {
+                  "type": "frame",
+                  "id": "aZvFi",
+                  "name": "Stage HARBOURFLAP",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vmdIh",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "HARBOURFLAP",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g6USiP",
+                  "name": "Stage ORBIT",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pugyH",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "ORBIT",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TVJn5",
+                  "name": "Stage PARK",
+                  "width": "fill_container",
+                  "height": 42,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eKlNb",
+                      "name": "Stage name",
+                      "fill": "#FFFFFF",
+                      "content": "PARK",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Yw7kL",
+              "name": "Grid",
+              "width": 390,
+              "height": 380,
+              "fill": "#122E25",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "p33e0",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Time column",
+                  "fill": "#0A1D17",
+                  "width": 52,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "guUeG",
+                  "x": 52,
+                  "y": 0,
+                  "name": "Grid line 17:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ZZga3",
+                  "x": 4,
+                  "y": 2,
+                  "name": "Time 17:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "z6SWph",
+                  "x": 52,
+                  "y": 46.5,
+                  "name": "Grid line 17:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "iBoAL",
+                  "x": 4,
+                  "y": 39.5,
+                  "name": "Time 17:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "17:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "h2UHP",
+                  "x": 52,
+                  "y": 93,
+                  "name": "Grid line 18:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "lxWPK",
+                  "x": 4,
+                  "y": 86,
+                  "name": "Time 18:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "scowW",
+                  "x": 52,
+                  "y": 139.5,
+                  "name": "Grid line 18:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "X4qesM",
+                  "x": 4,
+                  "y": 132.5,
+                  "name": "Time 18:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "18:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "IUKL3",
+                  "x": 52,
+                  "y": 186,
+                  "name": "Grid line 19:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "hFZSW",
+                  "x": 4,
+                  "y": 179,
+                  "name": "Time 19:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "mHbeN",
+                  "x": 52,
+                  "y": 232.5,
+                  "name": "Grid line 19:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "yjkUm",
+                  "x": 4,
+                  "y": 225.5,
+                  "name": "Time 19:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "19:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Y9sIhD",
+                  "x": 52,
+                  "y": 279,
+                  "name": "Grid line 20:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ptWFd",
+                  "x": 4,
+                  "y": 272,
+                  "name": "Time 20:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "E1gOXV",
+                  "x": 52,
+                  "y": 325.5,
+                  "name": "Grid line 20:30",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ubM4j",
+                  "x": 4,
+                  "y": 318.5,
+                  "name": "Time 20:30",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "20:30",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "vNf7N",
+                  "x": 52,
+                  "y": 372,
+                  "name": "Grid line 21:00",
+                  "fill": "#274D40",
+                  "width": 338,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "R2i7C",
+                  "x": 4,
+                  "y": 365,
+                  "name": "Time 21:00",
+                  "fill": "#D9656C",
+                  "textGrowth": "fixed-width",
+                  "width": 44,
+                  "content": "21:00",
+                  "textAlign": "right",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "N9ytTW",
+                  "x": 164,
+                  "y": 0,
+                  "name": "Column rule 1",
+                  "fill": "#274D40",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "rectangle",
+                  "id": "N6pAz",
+                  "x": 276,
+                  "y": 0,
+                  "name": "Column rule 2",
+                  "fill": "#274D40",
+                  "width": 1,
+                  "height": 380
+                },
+                {
+                  "type": "frame",
+                  "id": "IvEwI",
+                  "x": 166,
+                  "y": 94,
+                  "name": "Card TOMII",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#AF868A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xq4f0",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:00-18:45",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "q3e1X",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "TOMII",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZVmnP",
+                  "x": 166,
+                  "y": 210.25,
+                  "name": "Card SOFI TUKKER",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#AF868A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wVtMQ",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:15-20:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "u99Jp",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SOFI TUKKER",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lpaJV",
+                  "x": 278,
+                  "y": 233.5,
+                  "name": "Card FAZERDAZE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#74988A",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "u3GJw",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "19:30-20:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "x8Xcr",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "FAZERDAZE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kvcQU",
+                  "x": 54,
+                  "y": 280,
+                  "name": "Card MALCOLM TODD",
+                  "clip": true,
+                  "width": 104,
+                  "height": 91,
+                  "fill": "#969269",
+                  "cornerRadius": 5,
+                  "stroke": "#00000000",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "L6xkg",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "20:00-21:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Za5Qx",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MALCOLM TODD",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Va70Y",
+                  "x": 166,
+                  "y": 70.75,
+                  "name": "Card GOODNIGHT LILLIE",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F396A0",
+                  "cornerRadius": 5,
+                  "stroke": "#001A14",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eJQOf",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "17:45-18:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZEnGr",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GOODNIGHT LILLIE",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "x7OVhb",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZVWAj",
+                  "x": 54,
+                  "y": 140.5,
+                  "name": "Card GORDON FLANDERS",
+                  "clip": true,
+                  "width": 104,
+                  "height": 67.75,
+                  "fill": "#F6F08A",
+                  "cornerRadius": 5,
+                  "stroke": "#001A14",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": 5,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z7jLD",
+                      "name": "Time",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "18:30-19:15",
+                      "fontFamily": "Inter",
+                      "fontSize": 7.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jAnzo",
+                      "name": "Artist",
+                      "fill": "#001A14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "GORDON FLANDERS",
+                      "lineHeight": 1.15,
+                      "fontFamily": "Inter",
+                      "fontSize": 9.5,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tpjDS",
+                      "layoutPosition": "absolute",
+                      "x": 86,
+                      "y": 4,
+                      "name": "Heart",
+                      "fill": "#C8323E",
+                      "content": "♥",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "A9FV7",
+          "name": "Metrics",
+          "fill": "#5A736A",
+          "content": "muted 4.58:1 vs dark card · wishlisted 6.71+ · ordering holds",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    }
+  ],
+  "fileToken": "ceb79414-5491-4848-b93d-1e405a424aae"
+}
