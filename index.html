@@ -10,49 +10,70 @@
     
     <link rel="apple-touch-icon" href="https://instagram.fmnl3-2.fna.fbcdn.net/v/t51.2885-19/497452560_18499793737011857_2819526722575145502_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fmnl3-2.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QGWlTR7iFVdThfI2B6L9TMi02gOlQl2crQ_mKHlKnqD4CDfVxnjNVfdiOqv5ZQUwow&_nc_ohc=THZdTh0eHYMQ7kNvwGUik7f&_nc_gid=8yHCm6pwdluO6Tv0Tn827Q&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfjOxlN5h89Q9tLo4djQ5zGipuRiIOocXPXL8ZuxKeXFtw&oe=69274362&_nc_sid=1e20d2">
 
-    <title>Clockenflap 2025</title>
+    <!-- Google Fonts: Inter & Noto Sans Hong Kong -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Clockenflap 2026 Timetable</title>
     <style>
         :root {
-            --col-width: 105px; 
+            --col-width: 108px; 
             --time-col-width: 50px;
             --header-height: 50px;
+            --font-main: 'Inter', 'Noto Sans HK', -apple-system, BlinkMacSystemFont, sans-serif;
             
-            /* Light Mode Defaults */
-            --bg-color: #f5f5f5;
-            --card-bg: #ffffff;
-            --text-main: #222222;
-            --text-muted: #666666;
-            --border-color: #eeeeee;
-            --header-bg: #ffffff;
-            --tab-bg: #333333;
-            --tab-text: #ffffff;
-            --modal-bg: #ffffff;
+            /* Official 2026 Poster Palette - Light Mode */
+            --bg-color: #FAF3F3;
+            --card-bg: #FAF3F3;
+            --text-main: #164234;
+            --text-muted: #5A736A;
+            --border-color: #E8BFC2;
+            --brand-bg: #E8757C;
+            --header-bg: #164234;
+            --header-text: #FFFFFF;
+            --time-bg: #FAF3F3;
+            --tab-bg: #103227;
+            --tab-text: #FFFFFF;
+            --tab-active-bg: #F6F08A;
+            --tab-active-text: #164234;
+            --modal-bg: #FAF3F3;
 
-            /* Stage Colors */
-            --color-harbourflap: #6ec6ff;
-            --color-orbit: #ffbad2;
-            --color-park: #4db6ac;
-            --color-robot: #ffd54f;
-            --color-silent: #cfd8dc;
-            --color-minimax: #80cbc4;
+            /* 2026 Stage Colors Extracted from Poster */
+            --color-harbourflap: #F6F08A;
+            --color-orbit: #F396A0;
+            --color-park: #98F5D4;
+            --color-robot: #F9F49B;
+            --color-polytechnic: #F49CA6;
+            --color-minkymax: #9DF4D3;
         }
 
         /* Dark Mode Overrides */
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #121212;
-                --card-bg: #1e1e1e;
-                --text-main: #e0e0e0;
-                --text-muted: #aaaaaa;
-                --border-color: #333333;
-                --header-bg: #1e1e1e;
-                --tab-bg: #1a1a1a;
-                --modal-bg: #2c2c2c;
+                --bg-color: #0E261E;
+                --card-bg: #122E25;
+                --text-main: #FAF3F3;
+                --text-muted: #A7C2B8;
+                --border-color: #274D40;
+                --brand-bg: #D9656C;
+                --header-bg: #0A1D17;
+                --header-text: #FAF3F3;
+                --time-bg: #122E25;
+                --tab-bg: #091813;
+                --tab-text: #D7E5E0;
+                --tab-active-bg: #F6F08A;
+                --tab-active-text: #164234;
+                --modal-bg: #16382D;
             }
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font-main);
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
@@ -62,11 +83,16 @@
             display: flex;
             flex-direction: column;
             overscroll-behavior: none;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        button, input, select, textarea {
+            font-family: var(--font-main);
         }
 
         /* Brand Header */
         .brand-header {
-            background-color: #000000;
+            background-color: var(--brand-bg);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,23 +112,24 @@
             display: flex;
             background: var(--tab-bg);
             color: var(--tab-text);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(22, 66, 52, 0.25);
             z-index: 100;
         }
         .tab {
             flex: 1;
             text-align: center;
-            padding: 15px 0;
-            font-weight: bold;
-            font-size: 14px;
+            padding: 14px 0;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.03em;
             cursor: pointer;
-            opacity: 0.7;
-            transition: 0.3s;
+            opacity: 0.78;
+            transition: 0.25s;
             -webkit-tap-highlight-color: transparent;
         }
         .tab.active {
-            background: #ec603d !important;
-            color: #000000 !important;
+            background: var(--tab-active-bg) !important;
+            color: var(--tab-active-text) !important;
             opacity: 1;
             border-bottom: none;
         }
@@ -121,7 +148,7 @@
             grid-template-columns: var(--time-col-width) repeat(6, var(--col-width));
             position: relative;
             min-width: fit-content;
-            padding-bottom: 80px;
+            padding-bottom: 85px;
             background: var(--card-bg);
             transition: 0.3s;
         }
@@ -134,15 +161,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-family: var(--font-main);
+            font-weight: 800;
             font-size: 11px; 
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
             background: var(--header-bg);
             border-bottom: 2px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
+            border-right: 1px solid rgba(255, 255, 255, 0.14);
             z-index: 20;
             text-align: center;
-            padding: 0 2px;
-            color: var(--text-main);
+            padding: 0 4px;
+            color: var(--header-text);
             word-wrap: break-word;
             line-height: 1.2;
         }
@@ -154,7 +184,7 @@
             z-index: 30;
             background: var(--header-bg);
             border-bottom: 2px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
+            border-right: 1px solid rgba(255, 255, 255, 0.14);
             width: var(--time-col-width);
             height: var(--header-height);
         }
@@ -163,10 +193,11 @@
         .time-slot {
             position: sticky;
             left: 0;
-            background: var(--header-bg);
+            background: var(--time-bg);
             border-right: 1px solid var(--border-color);
             font-size: 11px;
-            color: var(--text-muted);
+            font-weight: 700;
+            color: var(--brand-bg);
             text-align: center;
             z-index: 10;
             display: flex;
@@ -187,14 +218,14 @@
         /* --- ARTIST BLOCKS --- */
         .artist-block {
             margin: 1px 2px; 
-            border-radius: 4px;
-            padding: 3px;
+            border-radius: 6px;
+            padding: 4px 5px;
             font-size: 10px;
-            font-weight: 600;
-            color: #222; 
+            font-weight: 800;
+            color: #164234; 
             overflow: hidden;
             position: relative;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 2px rgba(22, 66, 52, 0.12);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -212,28 +243,30 @@
         /* WISHLIST STYLES */
         .schedule-grid.has-wishlist .artist-block {
             opacity: 0.3; 
-            filter: grayscale(60%);
+            filter: grayscale(65%);
         }
         .schedule-grid.has-wishlist .artist-block.wishlisted {
             opacity: 1;
             filter: none;
-            border: 2px solid #000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 2px solid #164234;
+            box-shadow: 0 4px 12px rgba(22, 66, 52, 0.32);
             z-index: 5;
         }
         .artist-block.wishlisted::after {
             content: "❤️";
             position: absolute;
-            top: 1px;
-            right: 1px;
+            top: 2px;
+            right: 2px;
             font-size: 8px;
         }
 
         .artist-time {
-            font-size: 8px;
-            opacity: 0.8;
-            margin-bottom: 1px;
-            font-weight: normal;
+            font-size: 8.5px;
+            color: #164234;
+            opacity: 0.88;
+            margin-bottom: 2px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
         }
 
         /* Stage Colors */
@@ -241,8 +274,8 @@
         .stage-Orbit { background-color: var(--color-orbit); }
         .stage-Park { background-color: var(--color-park); }
         .stage-Robot { background-color: var(--color-robot); }
-        .stage-Silent { background-color: var(--color-silent); }
-        .stage-Minimax { background-color: var(--color-minimax); }
+        .stage-Polytechnic { background-color: var(--color-polytechnic); }
+        .stage-Minkymax { background-color: var(--color-minkymax); }
 
         /* Current Time Line */
         #current-time-line {
@@ -250,7 +283,7 @@
             left: var(--time-col-width);
             right: 0;
             height: 2px;
-            background: #ff3b30;
+            background: #E8757C;
             z-index: 15;
             pointer-events: none;
             display: none;
@@ -260,12 +293,12 @@
             position: absolute;
             left: -35px;
             top: -7px;
-            background: #ff3b30;
-            color: white;
+            background: #E8757C;
+            color: #FFFFFF;
             font-size: 8px;
-            padding: 1px 3px;
-            border-radius: 2px;
-            font-weight: bold;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: 700;
         }
 
         /* Controls */
@@ -279,320 +312,329 @@
             padding-bottom: env(safe-area-inset-bottom);
         }
         .controls button {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            padding: 10px 15px;
+            background: rgba(22, 66, 52, 0.92);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            padding: 11px 16px;
             border-radius: 25px;
             font-size: 11px;
+            letter-spacing: 0.03em;
             cursor: pointer;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 3px 8px rgba(22, 66, 52, 0.35);
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: 700;
+            transition: transform 0.1s, background 0.2s;
+        }
+        .controls button:active {
+            transform: scale(0.96);
         }
 
-        /* --- ARTIST MODAL POPUP --- */
+        /* --- MODAL POPUP --- */
         .modal-overlay {
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.6);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(16, 50, 39, 0.68);
             z-index: 999;
             display: none;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 16px;
         }
         .modal-box {
             background: var(--modal-bg);
             color: var(--text-main);
-            width: 85%;
-            max-width: 320px;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            width: 88%;
+            max-width: 340px;
+            padding: 28px 24px;
+            border-radius: 20px;
+            border: 1px solid #E6DADA;
+            box-shadow: 0 12px 35px rgba(16, 50, 39, 0.45);
             text-align: center;
             position: relative;
             animation: popIn 0.2s ease-out;
         }
+        @media (prefers-color-scheme: dark) {
+            .modal-box {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+            }
+        }
         @keyframes popIn {
-            from { transform: scale(0.9); opacity: 0; }
+            from { transform: scale(0.92); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
-        
-        .modal-img-container {
-            width: 100%;
-            height: 180px;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            display: none;
-        }
-        .modal-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         .modal-title {
             font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-transform: uppercase; 
+            font-weight: 800;
+            margin: 4px 0 6px;
+            padding: 0 24px;
+            line-height: 1.25;
+            text-transform: uppercase;
         }
         .modal-info {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-muted);
-            margin-bottom: 25px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
         .modal-actions {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
+            width: 100%;
         }
         .btn-modal {
-            padding: 14px;
-            border-radius: 10px;
-            border: none;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 16px;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none !important;
+            appearance: none;
+            -webkit-appearance: none;
             cursor: pointer;
-            font-size: 15px;
-            text-decoration: none;
-            display: block;
-            transition: transform 0.1s;
+            transition: transform 0.12s ease, opacity 0.15s ease;
         }
-        .btn-modal:active { transform: scale(0.97); }
-        
-        .btn-spotify { background: #1DB954; color: white; }
-        .btn-wishlist { background: #ec603d; color: black; }
-        .btn-wishlist.remove { background: #555; color: white; }
+        .btn-modal:active {
+            transform: scale(0.97);
+        }
+
+        /* Wishlist Action (Primary High-Contrast CTA) */
+        .btn-wishlist {
+            background: #E8757C;
+            color: #FFFFFF;
+            border: none;
+            margin-bottom: 2px;
+            box-shadow: 0 3px 10px rgba(232, 117, 124, 0.35);
+        }
+        .btn-wishlist.remove {
+            background: #4A5D56;
+            color: #FFFFFF;
+            border: none;
+            box-shadow: 0 3px 10px rgba(22, 66, 52, 0.25);
+        }
+
+        /* Soft Pastel-Tinted Streaming Service Buttons */
+        .btn-spotify {
+            background: #E7FBF3;
+            color: #164234;
+            border: 1.5px solid #7CD9B6;
+        }
+        .btn-apple {
+            background: #FDECEE;
+            color: #7A242B;
+            border: 1.5px solid #E88B93;
+        }
+        .btn-youtube {
+            background: #FDFCE6;
+            color: #4A4608;
+            border: 1.5px solid #D8D158;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn-spotify {
+                background: rgba(156, 243, 211, 0.16);
+                color: #9CF3D3;
+                border: 1.5px solid rgba(156, 243, 211, 0.45);
+            }
+            .btn-apple {
+                background: rgba(245, 154, 161, 0.16);
+                color: #F59AA1;
+                border: 1.5px solid rgba(245, 154, 161, 0.45);
+            }
+            .btn-youtube {
+                background: rgba(246, 241, 130, 0.16);
+                color: #F6F182;
+                border: 1.5px solid rgba(246, 241, 130, 0.45);
+            }
+        }
         
         .btn-close {
             position: absolute;
-            top: 10px;
-            right: 15px;
-            background: none;
+            top: 14px;
+            right: 14px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
             border: none;
+            border-radius: 50%;
             font-size: 24px;
+            line-height: 1;
             color: var(--text-muted);
             cursor: pointer;
-            padding: 5px;
-        }
-
-        /* --- PROMO OVERLAY STYLES --- */
-        .promo-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 2000; /* Higher than everything else */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-        }
-        .promo-box {
-            width: 85%;
-            max-width: 400px;
-            position: relative;
-            animation: slideUp 0.4s ease-out;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .promo-img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            display: block;
-        }
-        .btn-promo-close {
-            position: absolute;
-            top: -45px;
-            right: 0;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid white;
-            color: white;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            font-size: 24px;
-            line-height: 32px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             padding: 0;
-            padding-bottom: 3px; /* visual center adjustment */
+            transition: background-color 0.15s ease, color 0.15s ease;
         }
-        .btn-promo-close:active {
-            background: rgba(255,255,255,0.4);
+        .btn-close:hover {
+            background: rgba(128, 128, 128, 0.15);
+            color: var(--text-main);
         }
-
     </style>
 </head>
 <body>
 
-    <div class="promo-overlay" id="promo-overlay">
-        <div class="promo-box">
-            <button class="btn-promo-close" onclick="closePromo()">×</button>
-            <a href="https://www.ticketflap.com/clockenflap2026" target="_blank">
-                <img src="https://totalticketing-ets-ttlcom-prod-singapore-web-files.s3.amazonaws.com/media/uploads/images/056a1c096df6d1bd.jpeg" alt="Clockenflap Promo" class="promo-img">
-            </a>
-        </div>
-    </div>
     <div class="brand-header">
-        <img src="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg" alt="Clockenflap" class="brand-logo">
+        <img src="https://networksites.livenationinternational.com/networksites/myigqxlv/logo-clockenflap-60px.svg" alt="Clockenflap 2026" class="brand-logo">
     </div>
 
     <div class="tabs">
-        <div class="tab" onclick="switchDay('Fri')">DEC 5 (FRI)</div>
-        <div class="tab" onclick="switchDay('Sat')">DEC 6 (SAT)</div>
-        <div class="tab" onclick="switchDay('Sun')">DEC 7 (SUN)</div>
+        <div class="tab active" onclick="switchDay('Fri', this)">DEC 4 (FRI)</div>
+        <div class="tab" onclick="switchDay('Sat', this)">DEC 5 (SAT)</div>
+        <div class="tab" onclick="switchDay('Sun', this)">DEC 6 (SUN)</div>
     </div>
 
     <div class="schedule-viewport" id="viewport">
-        <div class="schedule-grid" id="schedule-container">
-            </div>
+        <div class="schedule-grid" id="schedule-container"></div>
         <div id="current-time-line"></div>
     </div>
 
     <div class="controls">
-        <button onclick="clearWishlist()">Reset Wishlist</button>
+        <button id="btn-reset" onclick="clearWishlist()">Reset Wishlist</button>
     </div>
 
     <div class="modal-overlay" id="modal">
         <div class="modal-box">
-            <button class="btn-close" onclick="closeModal()">×</button>
+            <button class="btn-close" onclick="closeModal()" aria-label="Close">×</button>
             
-            <div class="modal-img-container" id="m-img-container">
-                <img src="" alt="Artist" class="modal-img" id="m-img">
-            </div>
-
             <div class="modal-title" id="m-artist">Artist Name</div>
             <div class="modal-info" id="m-info">Stage • Time</div>
             
             <div class="modal-actions">
-                <a href="#" target="_blank" id="btn-spotify" class="btn-modal btn-spotify">
-                    Listen on Spotify 🎵
-                </a>
                 <button id="btn-wishlist" class="btn-modal btn-wishlist" onclick="toggleCurrentWishlist()">
                     Add to Wishlist ❤️
                 </button>
+                <a href="#" target="_blank" rel="noopener noreferrer" id="btn-spotify" class="btn-modal btn-spotify">
+                    Spotify 🎵
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" id="btn-apple" class="btn-modal btn-apple">
+                    Apple Music 🍎
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" id="btn-youtube" class="btn-modal btn-youtube">
+                    YouTube Music 📺
+                </a>
             </div>
         </div>
     </div>
 
 <script>
-    // --- DATA ---
+    // --- CONFIGURATION ---
     const STAGES = [
-        "Harbourflap Stage", "Orbit Stage", "Park Stage", 
-        "Robot Stage", "Silent Disco", "Minimax"
+        "Harbourflap Stage",
+        "Orbit Stage",
+        "Park Stage",
+        "Robot Stage",
+        "Poly*Technic",
+        "Minky Max"
     ];
     
-    const GRID_END_HOUR = 24;
+    const GRID_END_HOUR = 23;
     const PIXELS_PER_MIN = 2;
 
-    // UPDATED Data with Official Names & Regions
+    // --- CLOCKENFLAP 2026 FULL SCHEDULE DATA (83 ACTS) ---
     const rawData = [
-        // FRIDAY
-        {d: "Fri", s: "Harbourflap Stage", a: "PANTHER CHAN 陳蕾 (HK)", t: "18:20-19:15"},
-        {d: "Fri", s: "Harbourflap Stage", a: "JACOB COLLIER (UK)", t: "20:00-21:00"},
-        {d: "Fri", s: "Harbourflap Stage", a: "VAUNDY (JP)", t: "21:45-22:45"},
-        {d: "Fri", s: "Orbit Stage", a: "MOON TANG (HK)", t: "17:45-18:30"},
-        {d: "Fri", s: "Orbit Stage", a: "PASSENGER (UK)", t: "19:15-20:00"},
-        {d: "Fri", s: "Orbit Stage", a: "SPARKS (US)", t: "20:45-22:00"},
-        {d: "Fri", s: "Park Stage", a: "關勁松的 ASTROLOGY (HK)", t: "17:45-18:30"},
-        {d: "Fri", s: "Park Stage", a: "WENDY WANDER (TW)", t: "19:15-20:15"},
-        {d: "Fri", s: "Park Stage", a: "DIGITALISM DJ SET (DE)", t: "21:00-22:30"},
-        {d: "Fri", s: "Robot Stage", a: "MVSX (LIVE/DJ) (HK)", t: "17:00-18:00"},
-        {d: "Fri", s: "Robot Stage", a: "ANDY-S & THE HEMAN (REACH4LUV) (HK)", t: "18:00-19:00"},
-        {d: "Fri", s: "Robot Stage", a: "HUGO BELLOY (HK)", t: "19:00-20:00"},
-        {d: "Fri", s: "Robot Stage", a: "GOLOW (HK)", t: "20:00-21:00"},
-        {d: "Fri", s: "Robot Stage", a: "AZABU PUNKS (JP/HK)", t: "21:00-22:30"},
-        {d: "Fri", s: "Silent Disco", a: "R&B HOURS", t: "18:00-19:00"},
-        {d: "Fri", s: "Silent Disco", a: "SEIRYŪ", t: "19:00-20:00"},
-        {d: "Fri", s: "Silent Disco", a: "STEFFUN", t: "20:00-21:00"},
-        {d: "Fri", s: "Silent Disco", a: "DJ BOBBY PARSLEY", t: "21:00-22:00"},
-        {d: "Fri", s: "Silent Disco", a: "GYRO", t: "22:00-23:00"},
-        {d: "Fri", s: "Minimax", a: "ACT 1", t: "17:40-18:20"},
-        {d: "Fri", s: "Minimax", a: "ACT 2", t: "19:15-20:00"},
-        {d: "Fri", s: "Minimax", a: "ACT 3", t: "21:00-21:45"},
+        // FRIDAY (DEC 4)
+        {d: "Fri", s: "Harbourflap Stage", a: "Gordon Flanders", t: "18:30-19:15"},
+        {d: "Fri", s: "Harbourflap Stage", a: "Malcolm Todd", t: "20:00-21:00"},
+        {d: "Fri", s: "Harbourflap Stage", a: "keshi", t: "21:45-22:45"},
+        {d: "Fri", s: "Orbit Stage", a: "晚安莉莉 Goodnight Lillie", t: "17:45-18:30"},
+        {d: "Fri", s: "Orbit Stage", a: "Sofi Tukker", t: "19:15-20:00"},
+        {d: "Fri", s: "Orbit Stage", a: "Kim Gordon", t: "21:00-22:15"},
+        {d: "Fri", s: "Park Stage", a: "Tomii", t: "18:00-18:45"},
+        {d: "Fri", s: "Park Stage", a: "Fazerdaze", t: "19:30-20:15"},
+        {d: "Fri", s: "Park Stage", a: "HE.R Soundsystem", t: "21:00-22:30"},
+        {d: "Fri", s: "Robot Stage", a: "Enzyme", t: "17:00-18:30"},
+        {d: "Fri", s: "Robot Stage", a: "Yong Yee", t: "18:30-19:30"},
+        {d: "Fri", s: "Robot Stage", a: "Tom Price", t: "19:30-20:30"},
+        {d: "Fri", s: "Robot Stage", a: "Roman Techno (Jimmy/Hide/Kent)", t: "20:30-21:30"},
+        {d: "Fri", s: "Robot Stage", a: "Byrne", t: "21:30-22:30"},
+        {d: "Fri", s: "Poly*Technic", a: "Muii", t: "18:00-19:00"},
+        {d: "Fri", s: "Poly*Technic", a: "Biting Eye", t: "19:00-20:00"},
+        {d: "Fri", s: "Poly*Technic", a: "NNSCYA 張靜瑜", t: "20:00-21:00"},
+        {d: "Fri", s: "Poly*Technic", a: "Hirsk", t: "21:00-22:00"},
+        {d: "Fri", s: "Minky Max", a: "Heiyuen", t: "17:30-18:30"},
+        {d: "Fri", s: "Minky Max", a: "Waisty", t: "19:15-20:00"},
+        {d: "Fri", s: "Minky Max", a: "Masabi", t: "21:00-21:45"},
 
-        // SATURDAY
-        {d: "Sat", s: "Harbourflap Stage", a: "JFFT X BILLY CHOI X KI CHAN (HK)", t: "13:30-14:15"},
-        {d: "Sat", s: "Harbourflap Stage", a: "ROBOT SWING (TW)", t: "15:00-15:45"},
-        {d: "Sat", s: "Harbourflap Stage", a: "KENTO NAKAJIMA 中島健人 (JP)", t: "16:30-17:15"},
-        {d: "Sat", s: "Harbourflap Stage", a: "L'IMPÉRATRICE (FR)", t: "18:00-19:00"},
-        {d: "Sat", s: "Harbourflap Stage", a: "RICH BRIAN (ID)", t: "20:00-21:00"},
-        {d: "Sat", s: "Harbourflap Stage", a: "BLOC PARTY (UK)", t: "21:40-22:55"},
-        
-        // CORRECTION: Lai Ying
-        {d: "Sat", s: "Orbit Stage", a: "LAI YING 麗英 X FOUNTAIN DE CHOPIN (HK)", t: "14:30-15:15"},
-        {d: "Sat", s: "Orbit Stage", a: "PHUM VIPHURIT (TH)", t: "16:00-16:45"},
-        {d: "Sat", s: "Orbit Stage", a: "CHILLI BEANS. (JP)", t: "17:30-18:15"},
-        {d: "Sat", s: "Orbit Stage", a: "BETH GIBBONS (UK)", t: "19:00-20:00"},
-        {d: "Sat", s: "Orbit Stage", a: "ANO (JP)", t: "21:00-21:45"},
-        
-        {d: "Sat", s: "Park Stage", a: "YROCK (HK)", t: "13:15-13:45"},
-        {d: "Sat", s: "Park Stage", a: "BEFORE THE NIGHT ENDS (HK)", t: "14:15-14:45"},
-        {d: "Sat", s: "Park Stage", a: "AKASAKI (JP)", t: "15:30-16:15"},
-        {d: "Sat", s: "Park Stage", a: "SOCCER MOMMY (US)", t: "17:00-17:45"},
-        {d: "Sat", s: "Park Stage", a: "RIKON 離婚伝説 (JP)", t: "18:30-19:15"},
-        {d: "Sat", s: "Park Stage", a: "BOLIS PUPUL (BE)", t: "20:00-21:00"},
-        {d: "Sat", s: "Park Stage", a: "DAVE CLARKE (UK)", t: "21:15-22:45"},
-        {d: "Sat", s: "Robot Stage", a: "A-AMARC (HK)", t: "17:00-18:00"},
-        {d: "Sat", s: "Robot Stage", a: "KATAGYAL (HK)", t: "18:00-19:00"},
-        {d: "Sat", s: "Robot Stage", a: "UMAMI TAKEOVER (HK)", t: "19:00-20:00"},
-        {d: "Sat", s: "Robot Stage", a: "0159 (HK)", t: "20:00-21:00"},
-        {d: "Sat", s: "Robot Stage", a: "DISTRIKT (Faxtory, Jordy Lee, Scott B) (HK)", t: "21:00-22:30"},
-        {d: "Sat", s: "Silent Disco", a: "MASABI", t: "14:00-15:00"},
-        {d: "Sat", s: "Silent Disco", a: "DLULU", t: "15:00-16:00"},
-        {d: "Sat", s: "Silent Disco", a: "YUEN CHI CHUNG", t: "16:00-17:00"},
-        {d: "Sat", s: "Silent Disco", a: "TIGA", t: "17:00-18:00"},
-        {d: "Sat", s: "Silent Disco", a: "JOHNNY UTAH", t: "18:00-19:00"},
-        {d: "Sat", s: "Silent Disco", a: "DIAMOND", t: "19:00-20:00"},
-        {d: "Sat", s: "Silent Disco", a: "MARK T", t: "20:00-21:00"},
-        {d: "Sat", s: "Silent Disco", a: "BAD BAMBINO", t: "21:00-22:00"},
-        {d: "Sat", s: "Minimax", a: "ACT 1", t: "15:45-16:30"},
-        {d: "Sat", s: "Minimax", a: "ACT 2", t: "17:15-18:00"},
-        {d: "Sat", s: "Minimax", a: "ACT 3", t: "19:00-20:00"},
+        // SATURDAY (DEC 5)
+        {d: "Sat", s: "Harbourflap Stage", a: "Karen y Los Remedios", t: "13:30-14:15"},
+        {d: "Sat", s: "Harbourflap Stage", a: "黃妍 Cath Wong", t: "14:45-15:30"},
+        {d: "Sat", s: "Harbourflap Stage", a: "Huun-Huur-Tu", t: "16:30-17:15"},
+        {d: "Sat", s: "Harbourflap Stage", a: "南洋派對 N.Y.P.D.", t: "18:00-18:45"},
+        {d: "Sat", s: "Harbourflap Stage", a: "Queens of the Stone Age", t: "19:30-20:30"},
+        {d: "Sat", s: "Harbourflap Stage", a: "Hayley Williams", t: "21:15-22:40"},
+        {d: "Sat", s: "Orbit Stage", a: "家麗 Kalai", t: "14:15-14:45"},
+        {d: "Sat", s: "Orbit Stage", a: "張醒嬋 Nono x 夏日麼麼茶 Summer Sadness", t: "15:30-16:30"},
+        {d: "Sat", s: "Orbit Stage", a: "Pami", t: "17:15-18:00"},
+        {d: "Sat", s: "Orbit Stage", a: "Sleaford Mods", t: "18:30-19:30"},
+        {d: "Sat", s: "Orbit Stage", a: "Hush", t: "20:15-21:00"},
+        {d: "Sat", s: "Orbit Stage", a: "陳綺貞 Cheer Chen", t: "21:45-22:35"},
+        {d: "Sat", s: "Park Stage", a: "Flare", t: "13:45-14:30"},
+        {d: "Sat", s: "Park Stage", a: "Gwenji", t: "15:15-16:00"},
+        {d: "Sat", s: "Park Stage", a: "Lucid Gang ft. Ruje, Rohann", t: "17:00-17:45"},
+        {d: "Sat", s: "Park Stage", a: "Chanpan", t: "18:30-19:15"},
+        {d: "Sat", s: "Park Stage", a: "Loisey x Gill Mok", t: "20:00-20:50"},
+        {d: "Sat", s: "Park Stage", a: "Marcel Dettmann", t: "21:00-22:30"},
+        {d: "Sat", s: "Robot Stage", a: "HKCR Takeover w/ 祐曦 Yau Hei (ASJ) & Yung Waste", t: "17:00-18:30"},
+        {d: "Sat", s: "Robot Stage", a: "Yee. (Adam. + Tuesday + Oscar Days)", t: "18:30-19:30"},
+        {d: "Sat", s: "Robot Stage", a: "Annika", t: "19:30-20:30"},
+        {d: "Sat", s: "Robot Stage", a: "S2 Takeover Invites Fold", t: "20:30-22:30"},
+        {d: "Sat", s: "Poly*Technic", a: "Celestial 天上", t: "18:00-19:00"},
+        {d: "Sat", s: "Poly*Technic", a: "JVSY (Jovin)", t: "19:00-20:00"},
+        {d: "Sat", s: "Poly*Technic", a: "Casey Anderson & Gie", t: "20:00-21:00"},
+        {d: "Sat", s: "Poly*Technic", a: "Olivier Cong", t: "21:00-22:00"},
+        {d: "Sat", s: "Minky Max", a: "Hae Kels", t: "14:15-15:00"},
+        {d: "Sat", s: "Minky Max", a: "Barnaby Bruce", t: "15:45-16:30"},
+        {d: "Sat", s: "Minky Max", a: "Bad Bambino", t: "17:15-18:00"},
+        {d: "Sat", s: "Minky Max", a: "Mike the Unstoppable (Robot)", t: "18:45-19:30"},
+        {d: "Sat", s: "Minky Max", a: "Baby Diwata", t: "20:30-21:15"},
 
-        // SUNDAY
-        {d: "Sun", s: "Harbourflap Stage", a: "ULTRA LOUNGE - DJ KULU TRIBUTE (HK)", t: "13:15-14:15"},
-        {d: "Sun", s: "Harbourflap Stage", a: "JACE 陳凱詠 (HK)", t: "15:15-16:00"},
-        {d: "Sun", s: "Harbourflap Stage", a: "JEREMY ZUCKER (US)", t: "16:45-17:30"},
-        {d: "Sun", s: "Harbourflap Stage", a: "FRANZ FERDINAND (UK)", t: "18:15-19:15"},
-        {d: "Sun", s: "Harbourflap Stage", a: "JUD 陳泳希", t: "19:55-20:15"},
-        {d: "Sun", s: "Harbourflap Stage", a: "YOGA LIN 林宥嘉 (TW)", t: "20:15-21:00"},
-        {d: "Sun", s: "Harbourflap Stage", a: "MY BLOODY VALENTINE (UK)", t: "21:45-22:45"},
-        {d: "Sun", s: "Orbit Stage", a: "ANDR (TW)", t: "14:30-15:15"},
-        {d: "Sun", s: "Orbit Stage", a: "MARCIN (PL)", t: "16:00-16:45"},
-        {d: "Sun", s: "Orbit Stage", a: "TV GIRL (US)", t: "17:30-18:15"},
-        
-        // CORRECTION: Godspeed You! Black Emperor
-        {d: "Sun", s: "Orbit Stage", a: "GODSPEED YOU! BLACK EMPEROR (CA)", t: "19:15-20:15"},
-        {d: "Sun", s: "Orbit Stage", a: "ELLEGARDEN (JP)", t: "21:00-22:00"},
-        
-        {d: "Sun", s: "Park Stage", a: "ERIC'S WEEKEND 小明的假日週末", t: "13:30-14:00"},
-        {d: "Sun", s: "Park Stage", a: "PUULUUP (EE)", t: "14:45-15:30"},
-        {d: "Sun", s: "Park Stage", a: "BRIGHT EYES (US)", t: "16:30-17:15"},
-        {d: "Sun", s: "Park Stage", a: "M4GANG 摩四青年 WITH SPECIAL GUESTS FAMA 農夫", t: "18:00-19:10"},
-        {d: "Sun", s: "Park Stage", a: "RIRIA (UK)", t: "19:30-21:00"},
-        {d: "Sun", s: "Park Stage", a: "SPECIAL REQUEST (UK)", t: "21:00-22:30"},
-        {d: "Sun", s: "Robot Stage", a: "ELEKTRO MÜLL (HK)", t: "17:00-17:45"},
-        {d: "Sun", s: "Robot Stage", a: "RSD (UK)", t: "18:00-19:30"},
-        {d: "Sun", s: "Robot Stage", a: "WENDY WENN (HK)", t: "19:30-20:30"},
-        {d: "Sun", s: "Robot Stage", a: "MEAN GURLS CLUB (HK)", t: "20:30-21:30"},
-        {d: "Sun", s: "Silent Disco", a: "RICHIE", t: "14:00-15:00"},
-        {d: "Sun", s: "Silent Disco", a: "ROGUE MOTION", t: "17:00-18:00"},
-        {d: "Sun", s: "Silent Disco", a: "WONG CHI CHUNG", t: "18:00-19:00"},
-        {d: "Sun", s: "Silent Disco", a: "CHARLIEWO", t: "20:00-21:00"},
-        {d: "Sun", s: "Minimax", a: "ACT 1", t: "16:00-16:45"},
-        {d: "Sun", s: "Minimax", a: "ACT 2", t: "17:30-18:15"},
-        {d: "Sun", s: "Minimax", a: "ACT 3", t: "19:15-19:55"},
+        // SUNDAY (DEC 6)
+        {d: "Sun", s: "Harbourflap Stage", a: "Kowloon K", t: "13:15-14:00"},
+        {d: "Sun", s: "Harbourflap Stage", a: "Six60", t: "14:45-15:30"},
+        {d: "Sun", s: "Harbourflap Stage", a: "五條人 Wu Tiao Ren", t: "16:30-17:15"},
+        {d: "Sun", s: "Harbourflap Stage", a: "Hyukoh", t: "18:00-19:00"},
+        {d: "Sun", s: "Harbourflap Stage", a: "Slowdive", t: "19:45-20:45"},
+        {d: "Sun", s: "Harbourflap Stage", a: "Turnstile", t: "21:30-22:45"},
+        {d: "Sun", s: "Orbit Stage", a: "Copak", t: "14:00-14:45"},
+        {d: "Sun", s: "Orbit Stage", a: "Daniela Andrade", t: "15:30-16:15"},
+        {d: "Sun", s: "Orbit Stage", a: "DOMi & JD BECK", t: "17:00-18:00"},
+        {d: "Sun", s: "Orbit Stage", a: "Digable Planets", t: "18:45-19:45"},
+        {d: "Sun", s: "Orbit Stage", a: "The Jesus and Mary Chain", t: "20:45-21:45"},
+        {d: "Sun", s: "Park Stage", a: "Yrock", t: "13:15-14:00"},
+        {d: "Sun", s: "Park Stage", a: "Midnight Cowboy", t: "15:00-15:45"},
+        {d: "Sun", s: "Park Stage", a: "Room307", t: "16:15-17:00"},
+        {d: "Sun", s: "Park Stage", a: "Brekky Boy", t: "17:45-18:30"},
+        {d: "Sun", s: "Park Stage", a: "Jane Remover", t: "19:15-20:00"},
+        {d: "Sun", s: "Park Stage", a: "Kollin", t: "20:45-22:15"},
+        {d: "Sun", s: "Robot Stage", a: "Elektro Müll", t: "17:00-17:45"},
+        {d: "Sun", s: "Robot Stage", a: "Kevin Poon (DJ Set)", t: "18:00-19:30"},
+        {d: "Sun", s: "Robot Stage", a: "Smileyworld", t: "19:30-20:30"},
+        {d: "Sun", s: "Robot Stage", a: "Fingergap", t: "20:30-21:30"},
+        {d: "Sun", s: "Robot Stage", a: "Heavy HK Sound", t: "21:30-22:30"},
+        {d: "Sun", s: "Poly*Technic", a: "Jonas & Nelson", t: "18:00-19:00"},
+        {d: "Sun", s: "Poly*Technic", a: "Immortal Human Machine", t: "19:00-20:00"},
+        {d: "Sun", s: "Poly*Technic", a: "Loisey", t: "20:00-21:00"},
+        {d: "Sun", s: "Poly*Technic", a: "Polypumpkins", t: "21:00-22:00"},
+        {d: "Sun", s: "Minky Max", a: "Who Said I'm a DJ?", t: "14:00-14:45"},
+        {d: "Sun", s: "Minky Max", a: "Katagyal", t: "15:30-16:30"},
+        {d: "Sun", s: "Minky Max", a: "Jezzy", t: "17:15-18:00"},
+        {d: "Sun", s: "Minky Max", a: "Jay Pelmet (Robot)", t: "19:00-19:45"},
+        {d: "Sun", s: "Minky Max", a: "Diamond", t: "20:45-21:30"}
     ];
 
     // --- UTILS ---
@@ -614,12 +656,12 @@
     }
 
     function getStageClass(stageName) {
-        if(stageName.includes("Harbourflap")) return "stage-Harbourflap";
-        if(stageName.includes("Orbit")) return "stage-Orbit";
-        if(stageName.includes("Park")) return "stage-Park";
-        if(stageName.includes("Robot")) return "stage-Robot";
-        if(stageName.includes("Silent")) return "stage-Silent";
-        if(stageName.includes("Minimax")) return "stage-Minimax";
+        if (stageName.includes("Harbourflap")) return "stage-Harbourflap";
+        if (stageName.includes("Orbit")) return "stage-Orbit";
+        if (stageName.includes("Park")) return "stage-Park";
+        if (stageName.includes("Robot")) return "stage-Robot";
+        if (stageName.includes("Poly*Technic")) return "stage-Polytechnic";
+        if (stageName.includes("Minky Max")) return "stage-Minkymax";
         return "";
     }
 
@@ -627,32 +669,27 @@
         return `${item.d}-${item.a}`;
     }
 
-    // --- PROMO FUNCTION ---
-    function closePromo() {
-        document.getElementById('promo-overlay').style.display = 'none';
-    }
-
     // --- DATE LOGIC ---
     function determineInitialDay() {
         const now = new Date();
-        // Format as YYYY-MM-DD for easy string comparison based on local browser time
         const todayStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
 
-        // Festival Dates: 2025-12-05 to 2025-12-07
-        if (todayStr < '2025-12-05') return 'Fri'; // Before event
-        if (todayStr === '2025-12-05') return 'Fri';
-        if (todayStr === '2025-12-06') return 'Sat';
-        if (todayStr === '2025-12-07') return 'Sun';
-        if (todayStr > '2025-12-07') return 'Sun'; // After event
+        // Clockenflap 2026 Festival Dates: 2026-12-04 to 2026-12-06
+        if (todayStr < '2026-12-04') return 'Fri'; // Before event -> first day
+        if (todayStr === '2026-12-04') return 'Fri';
+        if (todayStr === '2026-12-05') return 'Sat';
+        if (todayStr === '2026-12-06') return 'Sun';
+        if (todayStr > '2026-12-06') return 'Sun'; // After event -> last day
 
-        return 'Fri'; // Fallback
+        return 'Fri';
     }
 
     // --- STATE ---
-    let currentDay = determineInitialDay(); // Automatically determine day on load
-    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist')) || []);
+    let currentDay = determineInitialDay();
+    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist2026')) || []);
     let selectedArtistId = null;
-
+    let resetConfirmPending = false;
+    let resetConfirmTimer = null;
 
     // --- CORE RENDER ---
     function renderSchedule(day) {
@@ -676,7 +713,7 @@
         STAGES.forEach((stage, index) => {
             const div = document.createElement('div');
             div.className = 'stage-header';
-            div.textContent = stage.replace(' Stage', '').replace('Powered by Carlsberg', '');
+            div.textContent = stage.replace(' Stage', '');
             div.style.gridColumn = index + 2; 
             div.style.gridRow = 1;
             container.appendChild(div);
@@ -685,9 +722,9 @@
         // 2. Time Axis & Grid
         const totalDurationMins = (GRID_END_HOUR - startHour) * 60;
         const intervals = totalDurationMins / 5; 
-        container.style.gridTemplateRows = `${50}px repeat(${intervals}, ${5 * PIXELS_PER_MIN}px)`;
+        container.style.gridTemplateRows = `50px repeat(${intervals}, ${5 * PIXELS_PER_MIN}px)`;
 
-        for(let h = startHour; h < GRID_END_HOUR; h++) {
+        for (let h = startHour; h < GRID_END_HOUR; h++) {
             [0, 30].forEach(m => {
                 const timeDiv = document.createElement('div');
                 timeDiv.className = 'time-slot';
@@ -721,7 +758,7 @@
             const colIndex = STAGES.indexOf(item.s) + 2;
             const artistId = createId(item);
 
-            if(colIndex > 1) {
+            if (colIndex > 1) {
                 const div = document.createElement('div');
                 div.className = `artist-block ${getStageClass(item.s)}`;
                 
@@ -745,27 +782,19 @@
         selectedArtistId = id;
         
         document.getElementById('m-artist').textContent = item.a;
-        document.getElementById('m-info').textContent = `${item.d} • ${item.s} • ${item.t}`;
-        
-        // Show image if it exists in data
-        const imgContainer = document.getElementById('m-img-container');
-        const imgEl = document.getElementById('m-img');
-        
-        if (item.img) {
-            imgEl.src = item.img;
-            imgContainer.style.display = 'block';
-        } else {
-            imgContainer.style.display = 'none';
-        }
+        document.getElementById('m-info').textContent = `${item.d.toUpperCase()} • ${item.s} • ${item.t}`;
 
-        // Clean artist name for Spotify search (remove parens region)
-        const cleanName = item.a.split('(')[0].trim();
-        const spotifyLink = `https://open.spotify.com/search/${encodeURIComponent(cleanName)}`;
-        document.getElementById('btn-spotify').href = spotifyLink;
+        // Strip parenthetical stage/member notes for cleaner music platform searches
+        const cleanName = item.a.replace(/\s*\(.*?\)\s*/g, ' ').trim();
+        const encodedQuery = encodeURIComponent(cleanName);
+
+        document.getElementById('btn-spotify').href = `https://open.spotify.com/search/${encodedQuery}`;
+        document.getElementById('btn-apple').href = `https://music.apple.com/hk/search?term=${encodedQuery}`;
+        document.getElementById('btn-youtube').href = `https://music.youtube.com/search?q=${encodedQuery}`;
         
         const wlBtn = document.getElementById('btn-wishlist');
         if (wishlist.has(id)) {
-            wlBtn.textContent = "Remove from Wishlist ❌";
+            wlBtn.textContent = "Remove from Wishlist ✕";
             wlBtn.classList.add('remove');
         } else {
             wlBtn.textContent = "Add to Wishlist ❤️";
@@ -789,28 +818,43 @@
             wishlist.add(selectedArtistId);
         }
 
-        localStorage.setItem('clockenflapWishlist', JSON.stringify([...wishlist]));
+        localStorage.setItem('clockenflapWishlist2026', JSON.stringify([...wishlist]));
         renderSchedule(currentDay);
         closeModal();
     }
     
     function clearWishlist() {
-        if(confirm("Clear your wishlist?")) {
-            wishlist.clear();
-            localStorage.setItem('clockenflapWishlist', JSON.stringify([]));
-            renderSchedule(currentDay);
+        const btn = document.getElementById('btn-reset');
+        if (!resetConfirmPending) {
+            resetConfirmPending = true;
+            btn.textContent = "Tap Again to Clear";
+            btn.style.background = "#E8757C";
+            resetConfirmTimer = setTimeout(() => {
+                resetConfirmPending = false;
+                btn.textContent = "Reset Wishlist";
+                btn.style.background = "rgba(22, 66, 52, 0.92)";
+            }, 3000);
+            return;
         }
+
+        clearTimeout(resetConfirmTimer);
+        resetConfirmPending = false;
+        btn.textContent = "Reset Wishlist";
+        btn.style.background = "rgba(22, 66, 52, 0.92)";
+
+        wishlist.clear();
+        localStorage.setItem('clockenflapWishlist2026', JSON.stringify([]));
+        renderSchedule(currentDay);
     }
 
     document.getElementById('modal').onclick = function(e) {
-        if(e.target === this) closeModal();
-    }
-
+        if (e.target === this) closeModal();
+    };
 
     // --- TIME LINE & CONTROLS ---
     function updateTimeLine() {
         const now = new Date();
-        let minutes = now.getHours() * 60 + now.getMinutes();
+        const minutes = now.getHours() * 60 + now.getMinutes();
         const startHour = getGridStartHour(currentDay);
         const gridStartMins = startHour * 60;
         const offset = minutes - gridStartMins;
@@ -824,31 +868,29 @@
         }
     }
 
-    function switchDay(day) {
+    function switchDay(day, tabEl) {
         currentDay = day;
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        event.target.classList.add('active');
+        if (tabEl) {
+            tabEl.classList.add('active');
+        }
         renderSchedule(day);
         document.getElementById('viewport').scrollTop = 0;
         updateTimeLine(); 
     }
 
     // --- INIT ---
-    // Render based on determined current day
     renderSchedule(currentDay);
-    
-    // Update UI Tabs to reflect the auto-selected day
+
     document.querySelectorAll('.tab').forEach(t => {
         t.classList.remove('active');
-        // Check if the tab text contains the currentDay string (e.g., "FRI")
-        if(t.textContent.includes(currentDay.toUpperCase())) {
+        if (t.textContent.includes(currentDay.toUpperCase())) {
             t.classList.add('active');
         }
     });
 
     setInterval(updateTimeLine, 60000); 
     updateTimeLine(); 
-
 </script>
 </body>
 </html>
