@@ -1,0 +1,4 @@
+# Design artifacts: local working material, not part of the shipped site.
+*.pen
+docs/designs/
+docs/reviews/

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -210,13 +210,23 @@
             flex: 1;
             text-align: center;
             padding: 14px 0;
+            font-family: inherit;
             font-weight: 700;
             font-size: 13px;
             letter-spacing: 0.03em;
             cursor: pointer;
             opacity: 0.78;
             transition: 0.25s;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            appearance: none;
+            -webkit-appearance: none;
             -webkit-tap-highlight-color: transparent;
+        }
+        .tab:focus-visible {
+            outline: 3px solid var(--tab-active-bg);
+            outline-offset: -3px;
         }
         .tab.active {
             background: var(--tab-active-bg) !important;
@@ -341,6 +351,11 @@
         .artist-block:active {
             transform: scale(0.98);
         }
+        .artist-block:focus-visible {
+            outline: 3px solid #164234;
+            outline-offset: 2px;
+            z-index: 6;
+        }
 
         /* WISHLIST FOCUS STYLES (Accessible High-Contrast Muted Tones) */
         .schedule-grid.has-wishlist .artist-block:not(.wishlisted) {
@@ -386,7 +401,6 @@
         .artist-time {
             font-size: 8.5px;
             color: #164234;
-            opacity: 0.88;
             margin-bottom: 2px;
             font-weight: 600;
             letter-spacing: 0.01em;
@@ -668,6 +682,18 @@
             background: rgba(128, 128, 128, 0.15);
             color: var(--text-main);
         }
+        @media (prefers-reduced-motion: reduce) {
+            .artist-block,
+            .tab,
+            .modal-box,
+            .controls button,
+            .btn-modal {
+                transition: none;
+            }
+            .modal-box {
+                animation: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -678,9 +704,9 @@
         </div>
 
         <div class="tabs">
-            <div class="tab active" onclick="switchDay('Fri', this)">DEC 4 (FRI)</div>
-            <div class="tab" onclick="switchDay('Sat', this)">DEC 5 (SAT)</div>
-            <div class="tab" onclick="switchDay('Sun', this)">DEC 6 (SUN)</div>
+            <button type="button" class="tab active" aria-pressed="true" onclick="switchDay('Fri', this)">DEC 4 (FRI)</button>
+            <button type="button" class="tab" aria-pressed="false" onclick="switchDay('Sat', this)">DEC 5 (SAT)</button>
+            <button type="button" class="tab" aria-pressed="false" onclick="switchDay('Sun', this)">DEC 6 (SUN)</button>
         </div>
 
         <div class="schedule-viewport" id="viewport">
@@ -693,7 +719,7 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="modal">
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-artist">
         <div class="modal-box">
             <button class="btn-close" onclick="closeModal()" aria-label="Close">×</button>
             
@@ -872,8 +898,15 @@
 
     // --- STATE ---
     let currentDay = determineInitialDay();
-    let wishlist = new Set(JSON.parse(localStorage.getItem('clockenflapWishlist2026')) || []);
+    let wishlist = new Set();
+    try {
+        const stored = JSON.parse(localStorage.getItem('clockenflapWishlist2026'));
+        if (Array.isArray(stored)) wishlist = new Set(stored);
+    } catch (e) {
+        wishlist = new Set();
+    }
     let selectedArtistId = null;
+    let lastFocusedElement = null;
     let currentArtistQuery = "";
     let fallbackTimer = null;
     let resetConfirmPending = false;
@@ -950,17 +983,27 @@
             if (colIndex > 1) {
                 const div = document.createElement('div');
                 div.className = `artist-block ${getStageClass(item.s)}`;
-                
-                if (wishlist.has(artistId)) {
+                const isWishlisted = wishlist.has(artistId);
+
+                if (isWishlisted) {
                     div.classList.add('wishlisted');
                 }
 
                 div.style.gridColumn = colIndex;
                 div.style.gridRow = `${rowStart} / span ${span}`;
                 div.innerHTML = `<div class="artist-time">${item.t}</div>${item.a}`;
-                
+                div.setAttribute('role', 'button');
+                div.tabIndex = 0;
+                div.setAttribute('aria-label', `${item.a}, ${item.s}, ${item.t}${isWishlisted ? ', wishlisted' : ''}`);
+
                 div.onclick = () => openModal(item, artistId);
-                
+                div.onkeydown = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openModal(item, artistId);
+                    }
+                };
+
                 container.appendChild(div);
             }
         });
@@ -976,6 +1019,7 @@
 
     function openModal(item, id) {
         selectedArtistId = id;
+        lastFocusedElement = document.activeElement;
         
         document.getElementById('m-artist').textContent = item.a;
         document.getElementById('m-info').textContent = `${item.d.toUpperCase()} • ${item.s} • ${item.t}`;
@@ -998,6 +1042,7 @@
         }
 
         document.getElementById('modal').style.display = 'flex';
+        document.querySelector('#modal .btn-close').focus();
     }
 
     function launchSchemeWithFallback(schemeUrl, webFallbackUrl) {
@@ -1079,6 +1124,10 @@
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
         selectedArtistId = null;
+        if (lastFocusedElement && lastFocusedElement.isConnected) {
+            lastFocusedElement.focus();
+        }
+        lastFocusedElement = null;
     }
 
     function toggleCurrentWishlist() {
@@ -1123,6 +1172,25 @@
         if (e.target === this) closeModal();
     };
 
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('modal').addEventListener('keydown', function(e) {
+        if (e.key !== 'Tab') return;
+        const focusables = this.querySelectorAll('button, a[href]');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
     // --- TIME LINE & CONTROLS ---
     function updateTimeLine() {
         const now = new Date();
@@ -1142,9 +1210,13 @@
 
     function switchDay(day, tabEl) {
         currentDay = day;
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-pressed', 'false');
+        });
         if (tabEl) {
             tabEl.classList.add('active');
+            tabEl.setAttribute('aria-pressed', 'true');
         }
         renderSchedule(day);
         document.getElementById('viewport').scrollTop = 0;
@@ -1186,10 +1258,9 @@
     renderSchedule(currentDay);
 
     document.querySelectorAll('.tab').forEach(t => {
-        t.classList.remove('active');
-        if (t.textContent.includes(currentDay.toUpperCase())) {
-            t.classList.add('active');
-        }
+        const isCurrent = t.textContent.includes(currentDay.toUpperCase());
+        t.classList.toggle('active', isCurrent);
+        t.setAttribute('aria-pressed', String(isCurrent));
     });
 
     setInterval(updateTimeLine, 60000); 
